@@ -1,0 +1,25 @@
+header {
+  --link-color: var(--secondary);
+
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-sm);
+  gap: var(--layout-gap-sm);
+}
+
+.header-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--layout-gap-sm);
+}
+
+.colour-buttons,
+.text-buttons {
+  display: flex;
+  gap: var(--layout-gap-sm);
+}

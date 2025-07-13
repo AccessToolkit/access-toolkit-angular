@@ -1,0 +1,15 @@
+* {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  line-height: calc(2px + 2ex + 2px);
+}

@@ -77,9 +77,13 @@ html {
 }
 
 body {
-  background-color: var(--secondary);
+  background-color: var(--page-background);
   color: var(--primary);
   line-height: calc(2px + 2ex + 2px);
+
+  &:has(app-home) {
+    background-color: var(--secondary);
+  }
 }
 
 header,

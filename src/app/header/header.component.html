@@ -1,11 +1,11 @@
 <header>
   <div class="header-toolbar">
     <div class="colour-buttons">
-      <button type="button" (click)="toggleDarkMode()">
+      <button type="button" (click)="changeTheme('dark-theme')">
         <span>dark mode</span>
       </button>
-      <button>
-        <span> high contrast </span>
+      <button (click)="changeTheme('monochrome')">
+        <span>monochrome</span>
       </button>
     </div>
     <div class="text-buttons">

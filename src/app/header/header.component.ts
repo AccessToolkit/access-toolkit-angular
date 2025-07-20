@@ -12,14 +12,15 @@ export class HeaderComponent {
 
   menuButtonAriaExpanded = signal('false');
 
-  toggleDarkMode() {
+  changeTheme(theme: string) {
     const body: HTMLBodyElement | null = document.querySelector('body');
     const classList = (body as HTMLElement).classList;
 
-    if (classList.contains('dark-theme')) {
-      classList.remove('dark-theme');
+    if (classList.contains(theme)) {
+      classList.remove('dark-theme', 'monochrome');
     } else {
-      classList.add('dark-theme');
+      classList.remove('dark-theme', 'monochrome');
+      classList.add(theme);
     }
   }
 

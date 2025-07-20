@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@use "vendors/normalize";
+@use "vendors/the-new-css-reset";
+
 :root {
   --padding-sm: clamp(1rem, 3%, 1.5rem);
   --padding-md: clamp(1.5rem, 6%, 3rem);

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AudiencesComponent } from './audiences/audiences.component';
 import { HomeComponent } from './home/home.component';
 import { PlanningComponent } from './planning/planning.component';
 import { ProductionComponent } from './production/production.component';
@@ -30,5 +31,10 @@ export const routes: Routes = [
     path: 'workplace',
     component: WorkplaceComponent,
     title: 'Workplace',
+  },
+  {
+    path: 'audiences',
+    component: AudiencesComponent,
+    title: 'Audiences',
   },
 ];

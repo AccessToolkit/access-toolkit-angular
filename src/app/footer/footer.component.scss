@@ -32,14 +32,18 @@ footer a:active {
 
 #logos {
   display: flex;
-  background: var(--snowy-mint);
-  border: 0.7rem solid var(--snowy-mint);
+  background-color: var(--secondary);
+  border: 0.7rem solid var(--secondary);
   border-radius: 1rem;
   padding: 0.5rem;
   width: fit-content;
   gap: var(--layout-gap-sm);
   flex-wrap: wrap;
   justify-content: center;
+}
+
+body.dark-theme #logos {
+  background-color: var(--primary);
 }
 
 #logos img {

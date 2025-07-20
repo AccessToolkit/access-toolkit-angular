@@ -9,6 +9,10 @@ body.dark-theme {
   --page-background: var(--secondary);
 
   --optional-mint-dark-mix: #afb6b0;
+
+  #logos {
+    background-color: var(--primary);
+  }
 }
 
 body.dark-theme header {

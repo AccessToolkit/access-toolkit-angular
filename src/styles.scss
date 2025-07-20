@@ -1,74 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@use "abstracts/variables";
 @use "themes/themes";
 @use "vendors/normalize";
 @use "vendors/the-new-css-reset";
-
-:root {
-  --padding-sm: clamp(1rem, 3%, 1.5rem);
-  --padding-md: clamp(1.5rem, 6%, 3rem);
-  --padding-lg: clamp(3rem, 12%, 6rem);
-  --border-radius-md: 0.0625rem;
-
-  --block-flow-sm: min(2rem, 4vh);
-  --block-flow-md: min(4rem, 8vh);
-  --block-flow-lg: min(8rem, 16vh);
-
-  --layout-gap-sm: clamp(1rem, 3vmax, 1.5rem);
-  --layout-gap-md: clamp(1.5rem, 6vmax, 3rem);
-  --layout-gap-lg: clamp(3rem, 8vmax, 4rem);
-  /* Typography */
-  --minorSecond: 1.067;
-  --majorSecond: 1.125;
-  --minorThird: 1.2;
-  --majorThird: 1.25;
-  --perfectFourth: 1.333;
-  --augmentedFourth: 1.414;
-  --perfectFifth: 1.5;
-  --goldenRatio: 1.618;
-  --type-base-size: 1rem;
-  --type-ratio: var(--perfectFourth);
-  --type-size: 1rem;
-  /* --type-ratio: 1.2; */
-  --inverse-type-ratio: 0.8;
-  --type-size-min: calc(var(--type-size) - (var(--type-size) * 0.33));
-  --type-size-scaler: calc((var(--type-size) var(--type-size-min)) + 4vw);
-  --font-size: clamp(
-    var(--type-size-min),
-    var(--type-size-scaler),
-    var(--type-size)
-  );
-  --line-height: calc(2px + 3ex + 2px);
-
-  --body-2-size: var(--type-size);
-  --subheading-1-size: calc(var(--type-size) * var(--type-ratio));
-  --subheading-2-size: calc(var(--subheading-1-size) * var(--type-ratio));
-  --title-size: calc(var(--subheading-2-size) * var(--type-ratio));
-  --headline-size: calc(var(--title-size) * var(--type-ratio));
-
-  --body-1-size: calc(var(--type-size) * var(--inverse-type-ratio));
-
-  --grid-col-breakpoint: 33%;
-  /* Colours */
-  /* --link-color: #1e90ff; */
-  --link-color: #913e22;
-  --visited-color: #8700d0;
-
-  --old-background-color: springgreen;
-  --old-color: #4d1847;
-
-  --snowy-mint: #d7ffdb;
-  --blue: #420dff;
-  --red: #b40000;
-  --primary: var(--blue);
-  --secondary: var(--snowy-mint);
-  --page-background: white;
-  --color: var(--primary);
-  --background-color: var(--secondary);
-  --svg-fill: var(--snowy-mint);
-
-  --menu-nav-display: flex;
-  --menu-button-display: none;
-}
 
 * {
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -90,8 +24,7 @@ body {
   }
 }
 
-header,
-footer {
+header {
   --link-color: var(--secondary);
 
   background-color: var(--primary);
@@ -114,11 +47,6 @@ footer {
 .text-buttons {
   display: flex;
   gap: var(--layout-gap-sm);
-}
-
-footer {
-  justify-content: center;
-  text-align: center;
 }
 
 .a11y-button {
@@ -186,40 +114,6 @@ h1 {
   color: var(--snowy-mint);
 }
 
-#funders {
-  display: flex;
-  flex-direction: column;
-  gap: var(--layout-gap-sm);
-  align-items: center;
-}
-
-#logos {
-  display: flex;
-  background: var(--snowy-mint);
-  border: 0.7rem solid var(--snowy-mint);
-  border-radius: 1rem;
-  padding: 0.5rem;
-  width: fit-content;
-  gap: var(--layout-gap-sm);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#logos img {
-  height: 70px;
-}
-
-#credits {
-  display: flex;
-  flex-direction: column;
-  gap: var(--layout-gap-sm);
-}
-
-footer {
-  position: sticky;
-  top: 100vh;
-}
-
 /* :is(body, .block-flow) > * + * {
     margin-block-start: var(--block-flow-sm);
 } */
@@ -274,13 +168,6 @@ header a:active,
   outline-offset: 0;
 }
 
-footer a:focus,
-footer a:active {
-  background: var(--link-color);
-  color: var(--color);
-  outline: 0.125rem solid var(--link-color);
-  outline-offset: 0;
-}
 a:hover {
   text-decoration-thickness: 0.25rem;
 }

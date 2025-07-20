@@ -1,6 +1,7 @@
 body.monochrome {
   --primary: #121212;
   --secondary: #fff;
+  --page-background: white;
 }
 
 body.dark-theme {
@@ -10,15 +11,45 @@ body.dark-theme {
 
   --optional-mint-dark-mix: #afb6b0;
 
+  header {
+    --link-color: #aeb7af;
+    --svg-fill: var(--link-color);
+
+    background-color: var(--secondary);
+    color: var(--link-color);
+  }
+
   #logos {
     background-color: var(--primary);
   }
 }
 
-body.dark-theme header {
-  --link-color: #aeb7af;
-  --svg-fill: var(--link-color);
+body.light-theme {
+  --secondary: var(--snowy-mint);
+  --primary: var(--blue);
+  --page-background: white;
+}
 
-  background-color: var(--secondary);
-  color: var(--link-color);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --secondary: #282828;
+    --primary: #9ba79c;
+    --page-background: var(--secondary);
+
+    --optional-mint-dark-mix: #afb6b0;
+
+    body:not(.monochrome, .light-theme) {
+      header {
+        --link-color: #aeb7af;
+        --svg-fill: var(--link-color);
+
+        background-color: var(--secondary);
+        color: var(--link-color);
+      }
+
+      #logos {
+        background-color: var(--primary);
+      }
+    }
+  }
 }

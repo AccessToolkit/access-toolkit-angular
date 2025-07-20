@@ -17,9 +17,9 @@ export class HeaderComponent {
     const classList = (body as HTMLElement).classList;
 
     if (classList.contains(theme)) {
-      classList.remove('dark-theme', 'monochrome');
+      classList.remove('dark-theme', 'light-theme', 'monochrome');
     } else {
-      classList.remove('dark-theme', 'monochrome');
+      classList.remove('dark-theme', 'light-theme', 'monochrome');
       classList.add(theme);
     }
   }

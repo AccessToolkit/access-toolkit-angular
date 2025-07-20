@@ -1,0 +1,19 @@
+body.monochrome {
+  --primary: #121212;
+}
+
+body.dark-theme {
+  --secondary: #282828;
+  --primary: #9ba79c;
+  --page-background: var(--secondary);
+
+  --optional-mint-dark-mix: #afb6b0;
+}
+
+body.dark-theme header {
+  --link-color: #aeb7af;
+  --svg-fill: var(--link-color);
+
+  background-color: var(--secondary);
+  color: var(--link-color);
+}

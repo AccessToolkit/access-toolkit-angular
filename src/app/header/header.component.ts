@@ -12,6 +12,17 @@ export class HeaderComponent {
 
   menuButtonAriaExpanded = signal('false');
 
+  toggleDarkMode() {
+    const body: HTMLBodyElement | null = document.querySelector('body');
+    const classList = (body as HTMLElement).classList;
+
+    if (classList.contains('dark-theme')) {
+      classList.remove('dark-theme');
+    } else {
+      classList.add('dark-theme');
+    }
+  }
+
   toggleMenu = () => {
     let expanded: string;
     if (this.menuIsOpen()) {

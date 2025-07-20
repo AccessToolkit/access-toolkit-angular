@@ -14,12 +14,18 @@ header {
 .header-toolbar {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  gap: var(--layout-gap-sm);
+  justify-content: space-between;
+  gap: var(--layout-gap-md);
 }
 
 .colour-buttons,
 .text-buttons {
   display: flex;
   gap: var(--layout-gap-sm);
+}
+
+.a11y-button {
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
 }

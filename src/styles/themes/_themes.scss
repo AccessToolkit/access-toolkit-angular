@@ -1,7 +1,15 @@
 body.monochrome {
-  --primary: #121212;
+  --primary: var(--monochrome-black);
   --secondary: #fff;
   --page-background: white;
+
+  header {
+    --svg-fill: #fff;
+    a:focus,
+    a:active {
+      color: var(--monochrome-black);
+    }
+  }
 }
 
 body.dark-theme {

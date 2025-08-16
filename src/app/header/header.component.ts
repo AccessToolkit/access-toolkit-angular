@@ -12,12 +12,27 @@ export class HeaderComponent {
 
   menuButtonAriaExpanded = signal('false');
 
-  changeTextSize(direction: string) {
+  changeTextSize(direction: string): void {
     const html: HTMLHtmlElement | null = document.querySelector('html');
-    let fontSize = html?.style.fontSize;
 
-    if (direction === 'up') {
-      fontSize = fontSize;
+    if (html) {
+      let fontSizeFloat = parseFloat(
+        html.style.fontSize.slice(0, -3) as string
+      );
+
+      if (!Number.isNaN(fontSizeFloat)) {
+        if (direction === 'up') {
+          fontSizeFloat = fontSizeFloat + 0.125;
+        } else if (direction === 'down') {
+          fontSizeFloat = fontSizeFloat - 0.125;
+        } else if (direction === 'reset') {
+          fontSizeFloat = 1;
+        }
+
+        html.style.fontSize = `${fontSizeFloat}rem`;
+      }
+    } else {
+      return;
     }
   }
 

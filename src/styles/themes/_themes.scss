@@ -1,6 +1,4 @@
 body.light-theme {
-  --home-focus-bg: var(--primary);
-  --home-focus-color: var(--snowy-mint);
 }
 
 body.monochrome {
@@ -21,9 +19,6 @@ body.dark-theme {
   --secondary: var(--dark-mode-background);
   --primary: var(--snowy-mint);
   --page-background: var(--secondary);
-
-  --home-focus-bg: var(--primary);
-  --home-focus-color: var(--secondary);
 
   header {
     --link-color: var(--snowy-mint);
@@ -58,8 +53,6 @@ body.light-theme {
     --secondary: var(--dark-mode-background);
     --primary: var(--snowy-mint);
     --page-background: var(--secondary);
-
-    --optional-mint-dark-mix: #afb6b0;
 
     body:not(.monochrome, .light-theme) {
       header {

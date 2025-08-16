@@ -44,6 +44,8 @@ nav li {
   --gap: var(--layout-gap-md);
   --min: 25ch;
   --link-color: var(--primary);
+  --home-focus-bg: var(--primary);
+  --home-focus-color: var(--secondary);
 
   display: grid;
   gap: var(--gap);
@@ -52,7 +54,7 @@ nav li {
 }
 
 #home-nav li {
-  border: 0.25rem solid var(--color);
+  border: 0.25rem solid var(--primary);
   border-radius: 1rem;
   padding: var(--padding-md);
   position: relative;

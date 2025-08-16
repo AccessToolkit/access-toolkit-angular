@@ -5,7 +5,7 @@ body.monochrome {
 }
 
 body.dark-theme {
-  --secondary: #282828;
+  --secondary: var(--dark-mode-background);
   --primary: var(--snowy-mint);
   --page-background: var(--secondary);
 
@@ -17,6 +17,11 @@ body.dark-theme {
 
     background-color: var(--secondary);
     color: var(--link-color);
+
+    a:focus,
+    a:active {
+      color: var(--dark-mode-background);
+    }
   }
 
   hr.dark-mode-border {
@@ -36,7 +41,7 @@ body.light-theme {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --secondary: #282828;
+    --secondary: var(--dark-mode-background);
     --primary: var(--snowy-mint);
     --page-background: var(--secondary);
 
@@ -49,6 +54,11 @@ body.light-theme {
 
         background-color: var(--secondary);
         color: var(--link-color);
+
+        a:focus,
+        a:active {
+          color: var(--dark-mode-background);
+        }
       }
 
       hr.dark-mode-border {

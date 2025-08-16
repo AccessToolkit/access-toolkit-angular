@@ -11,6 +11,14 @@ header {
   gap: var(--layout-gap-sm);
 }
 
+a:focus,
+a:active {
+  background: var(--link-color);
+  color: var(--blue);
+  outline: 0.25rem solid var(--link-color);
+  outline-offset: 0;
+}
+
 .header-toolbar {
   width: 100%;
   display: flex;

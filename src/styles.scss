@@ -128,16 +128,6 @@ a {
   text-underline-offset: 0.0625rem;
 }
 
-header a:focus,
-header a:active,
-.main-content a:not(.header-anchor):focus,
-.main-content a:not(.header-anchor):active {
-  background: var(--link-color);
-  color: var(--color);
-  outline: 0.25rem solid var(--link-color);
-  outline-offset: 0;
-}
-
 hr.dark-mode-border {
   border-top: 4px dotted var(--page-background);
   overflow: visible;

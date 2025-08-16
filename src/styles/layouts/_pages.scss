@@ -23,6 +23,21 @@ span.word-count {
   font-size: var(--subheading-1-size);
 }
 
+.main-content a:not(.header-anchor):focus,
+.main-content a:not(.header-anchor):active {
+  --link-focus-color: var(--page-background);
+
+  background: var(--link-color);
+  color: var(--link-focus-color);
+  outline: 0.25rem solid var(--link-color);
+  outline-offset: 0;
+
+  &:visited {
+    background-color: var(--visited-color);
+    outline-color: var(--visited-color);
+  }
+}
+
 .header-anchor,
 .header-anchor:visited {
   color: var(--primary);

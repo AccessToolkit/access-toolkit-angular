@@ -19,6 +19,9 @@ body.dark-theme {
   --secondary: var(--dark-mode-background);
   --primary: var(--snowy-mint);
   --page-background: var(--secondary);
+  --link-color: var(--dark-mode-link-color);
+  --link-focus-color: var(--primary);
+  --visited-color: var(--dark-mode-visited-color);
 
   header {
     --link-color: var(--snowy-mint);
@@ -50,11 +53,13 @@ body.light-theme {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --secondary: var(--dark-mode-background);
-    --primary: var(--snowy-mint);
-    --page-background: var(--secondary);
-
     body:not(.monochrome, .light-theme) {
+      --secondary: var(--dark-mode-background);
+      --primary: var(--snowy-mint);
+      --page-background: var(--secondary);
+      --link-color: var(--dark-mode-link-color);
+      --visited-color: var(--dark-mode-visited-color);
+
       header {
         --link-color: var(--snowy-mint);
         --svg-fill: var(--link-color);

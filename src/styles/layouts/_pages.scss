@@ -37,11 +37,12 @@ span.word-count {
     outline-color: var(--visited-color);
   }
 }
-
-.header-anchor,
-.header-anchor:visited {
-  color: var(--primary);
-  text-decoration: none;
+.main-content {
+  .header-anchor,
+  .header-anchor:visited {
+    color: var(--primary);
+    text-decoration: none;
+  }
 }
 
 .header-anchor:hover,

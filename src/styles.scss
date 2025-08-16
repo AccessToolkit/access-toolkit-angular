@@ -60,9 +60,9 @@ nav li {
 
 #home-nav li:hover,
 #home-nav li:focus-within {
-  background-color: var(--primary);
-  color: var(--snowy-mint);
-  --link-color: var(--snowy-mint);
+  background-color: var(--home-focus-bg);
+  color: var(--home-focus-color);
+  --link-color: var(--home-focus-color);
 }
 
 h1 {
@@ -80,11 +80,6 @@ h1 {
 
 #home-nav a {
   text-decoration: none;
-}
-
-#home-nav li a:focus,
-#home-nav li a:active {
-  color: var(--snowy-mint);
 }
 
 /* :is(body, .block-flow) > * + * {

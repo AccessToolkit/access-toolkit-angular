@@ -1,3 +1,8 @@
+body.light-theme {
+  --home-focus-bg: var(--primary);
+  --home-focus-color: var(--snowy-mint);
+}
+
 body.monochrome {
   --primary: var(--monochrome-black);
   --secondary: #fff;
@@ -17,7 +22,8 @@ body.dark-theme {
   --primary: var(--snowy-mint);
   --page-background: var(--secondary);
 
-  --optional-mint-dark-mix: #afb6b0;
+  --home-focus-bg: var(--primary);
+  --home-focus-color: var(--secondary);
 
   header {
     --link-color: var(--snowy-mint);

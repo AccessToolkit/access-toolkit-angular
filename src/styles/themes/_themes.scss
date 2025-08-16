@@ -6,17 +6,21 @@ body.monochrome {
 
 body.dark-theme {
   --secondary: #282828;
-  --primary: #9ba79c;
+  --primary: var(--snowy-mint);
   --page-background: var(--secondary);
 
   --optional-mint-dark-mix: #afb6b0;
 
   header {
-    --link-color: #aeb7af;
+    --link-color: var(--snowy-mint);
     --svg-fill: var(--link-color);
 
     background-color: var(--secondary);
     color: var(--link-color);
+  }
+
+  hr.dark-mode-border {
+    border-color: var(--color);
   }
 
   #logos {
@@ -33,20 +37,23 @@ body.light-theme {
 @media (prefers-color-scheme: dark) {
   :root {
     --secondary: #282828;
-    --primary: #9ba79c;
+    --primary: var(--snowy-mint);
     --page-background: var(--secondary);
 
     --optional-mint-dark-mix: #afb6b0;
 
     body:not(.monochrome, .light-theme) {
       header {
-        --link-color: #aeb7af;
+        --link-color: var(--snowy-mint);
         --svg-fill: var(--link-color);
 
         background-color: var(--secondary);
         color: var(--link-color);
       }
 
+      hr.dark-mode-border {
+        border-color: var(--color);
+      }
       #logos {
         background-color: var(--primary);
       }

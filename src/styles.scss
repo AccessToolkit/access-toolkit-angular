@@ -9,6 +9,10 @@
   font-weight: 400;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body,
 html {
   height: 100%;
@@ -135,6 +139,13 @@ header a:active,
   color: var(--color);
   outline: 0.25rem solid var(--link-color);
   outline-offset: 0;
+}
+
+hr.dark-mode-border {
+  border-top: 4px dotted var(--page-background);
+  overflow: visible;
+  width: 82vw;
+  margin: 0 auto;
 }
 
 a:hover {

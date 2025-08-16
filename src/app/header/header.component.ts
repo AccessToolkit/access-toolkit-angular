@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   menuIsOpen = signal(false);
 
   menuButtonAriaExpanded = signal('false');
@@ -48,6 +48,19 @@ export class HeaderComponent {
     } else {
       this.clearTheme(classList);
       classList.add(theme);
+    }
+  }
+
+  ngOnInit(): void {
+    const fontSize = window.localStorage.getItem('font-size');
+    const theme = window.localStorage.getItem('theme');
+
+    if (fontSize) {
+      this.changeTextSize(fontSize);
+    }
+
+    if (theme) {
+      this.changeTheme(theme);
     }
   }
 

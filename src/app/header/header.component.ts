@@ -30,6 +30,7 @@ export class HeaderComponent {
         }
 
         html.style.fontSize = `${fontSizeFloat}rem`;
+        window.localStorage.setItem('font-size', fontSizeFloat.toString());
       }
     } else {
       return;
@@ -40,10 +41,12 @@ export class HeaderComponent {
     const body: HTMLBodyElement | null = document.querySelector('body');
     const classList = (body as HTMLElement).classList;
 
-    if (classList.contains(theme)) {
-      classList.remove('dark-theme', 'light-theme', 'monochrome');
+    window.localStorage.setItem('theme', theme);
+
+    if (classList.contains(theme) || theme === 'reset') {
+      this.clearTheme(classList);
     } else {
-      classList.remove('dark-theme', 'light-theme', 'monochrome');
+      this.clearTheme(classList);
       classList.add(theme);
     }
   }
@@ -59,4 +62,8 @@ export class HeaderComponent {
     }
     this.menuButtonAriaExpanded.set(expanded);
   };
+
+  private clearTheme(classList: DOMTokenList) {
+    classList.remove('dark-theme', 'light-theme', 'monochrome');
+  }
 }

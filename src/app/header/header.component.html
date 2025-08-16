@@ -12,7 +12,8 @@
       </button>
     </div>
     <div class="text-buttons">
-      <button>-</button><span></span>text size<button>+</button>
+      <button (click)="changeTextSize('down')">-</button><span></span>text
+      size<button (click)="changeTextSize('up')">+</button>
     </div>
     <div class="a11y-statement">a11y</div>
   </div>
@@ -55,3 +56,4 @@
     </nav>
   </div>
 </header>
+<hr class="dark-mode-border" />

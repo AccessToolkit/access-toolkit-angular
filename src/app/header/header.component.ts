@@ -12,6 +12,15 @@ export class HeaderComponent {
 
   menuButtonAriaExpanded = signal('false');
 
+  changeTextSize(direction: string) {
+    const html: HTMLHtmlElement | null = document.querySelector('html');
+    let fontSize = html?.style.fontSize;
+
+    if (direction === 'up') {
+      fontSize = fontSize;
+    }
+  }
+
   changeTheme(theme: string) {
     const body: HTMLBodyElement | null = document.querySelector('body');
     const classList = (body as HTMLElement).classList;

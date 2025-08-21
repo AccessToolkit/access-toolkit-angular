@@ -1,25 +1,47 @@
 <header>
   <div class="header-toolbar">
     <div class="colour-mode-container">
-      <button type="button" class="colour-select" aria-expanded="false">
+      <button
+        type="button"
+        class="colour-select"
+        [ngClass]="colourModeClass()"
+        aria-expanded="false"
+      >
+        <figure class="colour-circle"></figure>
         <span class="sr-only">Open the</span>
         <span>Colour Mode</span>
         <span class="sr-only">menu. Current mode is {{ themeName() }}</span>
       </button>
       <div class="colour-menu">
-        <button type="button" class="colour-mode dark">
+        <button
+          type="button"
+          class="colour-mode dark"
+          (click)="changeTheme('dark-theme')"
+        >
           <figure class="colour-circle"></figure>
           <span>dark</span>
         </button>
-        <button type="button" class="colour-mode light">
+        <button
+          type="button"
+          class="colour-mode light"
+          (click)="changeTheme('light-theme')"
+        >
           <figure class="colour-circle"></figure>
           <span>light</span>
         </button>
-        <button type="button" class="colour-mode monochrome">
+        <button
+          type="button"
+          class="colour-mode monochrome"
+          (click)="changeTheme('monochrome')"
+        >
           <figure class="colour-circle"></figure>
           <span>monochrome</span>
         </button>
-        <button type="button" class="colour-mode reset">
+        <button
+          type="button"
+          class="colour-mode reset"
+          (click)="changeTheme('reset')"
+        >
           <figure class="colour-circle"></figure>
           <span>system setting</span>
         </button>

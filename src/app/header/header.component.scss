@@ -38,15 +38,10 @@ button {
 
 .colour-select {
   border-radius: 0.5rem;
-  border: 2px solid var(--primary);
   padding: var(--padding-sm);
-  &:focus {
-    background-color: var(--primary);
-    color: var(--secondary);
-  }
-  &:hover {
-    outline: 2px solid var(--primary);
-  }
+  display: flex;
+  align-items: center;
+  gap: var(--layout-gap-xs);
 }
 
 .colour-menu {
@@ -57,17 +52,22 @@ button {
 
 .colour-mode {
   border-radius: 0.5rem;
-  border: 2px solid var(--primary);
   padding: var(--padding-sm);
   display: flex;
   align-items: center;
   gap: var(--layout-gap-xs);
+}
+
+.colour-mode,
+.colour-select {
+  border: 2px solid var(--secondary);
+
   &:focus {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
   }
   &:hover {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--secondary);
   }
 
   &.dark {
@@ -98,14 +98,16 @@ button {
 }
 
 @media (prefers-color-scheme: dark) {
-  .colour-mode.reset {
+  .colour-mode.reset,
+  .colour-select.reset {
     --circle-color-one: var(--snowy-mint);
     --circle-color-two: var(--dark-mode-background);
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .colour-mode.reset {
+  .colour-mode.reset,
+  .colour-select.reset {
     --circle-color-one: var(--snowy-mint);
     --circle-color-two: var(--blue);
   }

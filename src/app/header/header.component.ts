@@ -1,13 +1,15 @@
+import { NgClass } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
+  colourModeClass = signal('reset');
   menuIsOpen = signal(false);
   themeName = signal('system setting');
 
@@ -62,24 +64,30 @@ export class HeaderComponent implements OnInit {
 
     if (theme) {
       let themeName = 'system setting';
+      let buttonClass = 'reset';
 
       this.changeTheme(theme);
 
       switch (theme) {
         case 'dark-theme':
           themeName = 'dark mode';
+          buttonClass = 'dark';
           break;
         case 'light-theme':
           themeName = 'light mode';
+          buttonClass = 'light';
           break;
         case 'monochrome':
           themeName = 'black and white mode';
+          buttonClass = 'monochrome';
           break;
         default:
           themeName = 'system setting';
+          buttonClass = 'reset';
           break;
       }
       this.themeName.set(themeName);
+      this.colourModeClass.set(buttonClass);
     }
   }
 

@@ -34,6 +34,18 @@ body.dark-theme {
     a:active {
       color: var(--dark-mode-background);
     }
+
+    .colour-mode,
+    .colour-select {
+      border: 2px solid var(--primary);
+      &:focus {
+        background-color: var(--primary);
+        color: var(--secondary);
+      }
+      &:hover {
+        outline: 2px solid var(--primary);
+      }
+    }
   }
 
   hr.dark-mode-border {
@@ -70,6 +82,10 @@ body.light-theme {
         a:focus,
         a:active {
           color: var(--dark-mode-background);
+        }
+
+        .colour-mode {
+          border: 2px solid var(--primary);
         }
       }
 

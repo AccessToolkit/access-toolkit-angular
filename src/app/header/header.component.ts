@@ -10,9 +10,11 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   colourModeClass = signal('reset');
+  colourModeMenuIsOpen = signal(false);
   menuIsOpen = signal(false);
   themeName = signal('system setting');
 
+  colourModeMenuAriaExpanded = signal('false');
   menuButtonAriaExpanded = signal('false');
 
   changeTextSize(direction: string): void {
@@ -90,6 +92,18 @@ export class HeaderComponent implements OnInit {
       this.colourModeClass.set(buttonClass);
     }
   }
+
+  toggleColourModeMenu = () => {
+    let expanded: string;
+    if (this.colourModeMenuIsOpen()) {
+      this.colourModeMenuIsOpen.set(false);
+      expanded = 'false';
+    } else {
+      this.colourModeMenuIsOpen.set(true);
+      expanded = 'true';
+    }
+    this.colourModeMenuAriaExpanded.set(expanded);
+  };
 
   toggleMenu = () => {
     let expanded: string;

@@ -84,8 +84,16 @@ body.light-theme {
           color: var(--dark-mode-background);
         }
 
-        .colour-mode {
+        .colour-mode,
+        .colour-select {
           border: 2px solid var(--primary);
+          &:focus {
+            background-color: var(--primary);
+            color: var(--secondary);
+          }
+          &:hover {
+            outline: 2px solid var(--primary);
+          }
         }
       }
 

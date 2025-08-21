@@ -26,6 +26,42 @@ a:active {
   gap: var(--layout-gap-md);
 }
 
+.colour-mode-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap-sm);
+}
+
+button {
+  cursor: pointer;
+}
+
+.colour-select {
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  padding: var(--padding-sm);
+  &:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+}
+
+.colour-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap-sm);
+}
+
+.colour-mode {
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  padding: var(--padding-sm);
+  &:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+}
+
 .colour-buttons,
 .text-buttons {
   display: flex;

@@ -8,6 +8,7 @@
   --block-flow-md: min(4rem, 8vh);
   --block-flow-lg: min(8rem, 16vh);
 
+  --layout-gap-xs: clamp(0.5rem, 1.5vmax, 0.75rem);
   --layout-gap-sm: clamp(1rem, 3vmax, 1.5rem);
   --layout-gap-md: clamp(1.5rem, 6vmax, 3rem);
   --layout-gap-lg: clamp(3rem, 8vmax, 4rem);

@@ -40,9 +40,12 @@ button {
   border-radius: 0.5rem;
   border: 2px solid var(--primary);
   padding: var(--padding-sm);
-  &:hover {
+  &:focus {
     background-color: var(--primary);
     color: var(--secondary);
+  }
+  &:hover {
+    outline: 2px solid var(--primary);
   }
 }
 
@@ -56,9 +59,55 @@ button {
   border-radius: 0.5rem;
   border: 2px solid var(--primary);
   padding: var(--padding-sm);
-  &:hover {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-gap-xs);
+  &:focus {
     background-color: var(--primary);
     color: var(--secondary);
+  }
+  &:hover {
+    outline: 2px solid var(--primary);
+  }
+
+  &.dark {
+    --circle-color-one: var(--snowy-mint);
+    --circle-color-two: var(--dark-mode-background);
+  }
+  &.light {
+    --circle-color-one: var(--snowy-mint);
+    --circle-color-two: var(--blue);
+  }
+  &.monochrome {
+    --circle-color-one: white;
+    --circle-color-two: var(--monochrome-black);
+  }
+}
+
+.colour-circle {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--circle-color-one) 50%,
+    var(--circle-color-two) 50%
+  );
+  rotate: 45deg;
+  border: 2px solid var(--circle-color-one);
+}
+
+@media (prefers-color-scheme: dark) {
+  .colour-mode.reset {
+    --circle-color-one: var(--snowy-mint);
+    --circle-color-two: var(--dark-mode-background);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .colour-mode.reset {
+    --circle-color-one: var(--snowy-mint);
+    --circle-color-two: var(--blue);
   }
 }
 

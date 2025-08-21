@@ -7,10 +7,22 @@
         <span class="sr-only">menu. Current mode is {{ themeName() }}</span>
       </button>
       <div class="colour-menu">
-        <button type="button" class="colour-mode">dark</button>
-        <button type="button" class="colour-mode">light</button>
-        <button type="button" class="colour-mode">black and white</button>
-        <button type="button" class="colour-mode">browser default</button>
+        <button type="button" class="colour-mode dark">
+          <figure class="colour-circle"></figure>
+          <span>dark</span>
+        </button>
+        <button type="button" class="colour-mode light">
+          <figure class="colour-circle"></figure>
+          <span>light</span>
+        </button>
+        <button type="button" class="colour-mode monochrome">
+          <figure class="colour-circle"></figure>
+          <span>monochrome</span>
+        </button>
+        <button type="button" class="colour-mode reset">
+          <figure class="colour-circle"></figure>
+          <span>system setting</span>
+        </button>
       </div>
     </div>
 

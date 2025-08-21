@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   menuIsOpen = signal(false);
-  themeName = signal('browser default');
+  themeName = signal('system setting');
 
   menuButtonAriaExpanded = signal('false');
 
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
     }
 
     if (theme) {
-      let themeName = 'Browser default';
+      let themeName = 'system setting';
 
       this.changeTheme(theme);
 
@@ -76,7 +76,7 @@ export class HeaderComponent implements OnInit {
           themeName = 'black and white mode';
           break;
         default:
-          themeName = 'browser default';
+          themeName = 'system setting';
           break;
       }
       this.themeName.set(themeName);

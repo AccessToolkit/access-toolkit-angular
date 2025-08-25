@@ -53,10 +53,12 @@
         </div>
       </div>
       <div class="text-buttons">
-        <button (click)="changeTextSize('down')">-</button>
-        <span>text size</span>
-        <button (click)="changeTextSize('up')">+</button>
-        <button (click)="changeTextSize('reset')">reset text size</button>
+        <button class="text-button" (click)="changeTextSize('down')">-</button>
+        <span>Text Size</span>
+        <button class="text-button" (click)="changeTextSize('up')">+</button>
+        <button class="text-button reset" (click)="changeTextSize('reset')">
+          reset
+        </button>
       </div>
     </div>
 

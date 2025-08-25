@@ -1,63 +1,65 @@
 <header>
   <div class="header-toolbar">
-    <div class="colour-mode-container">
-      <button
-        type="button"
-        class="colour-select"
-        [ngClass]="colourModeClass()"
-        aria-expanded="false"
-        (click)="toggleColourModeMenu()"
-      >
-        <figure class="colour-circle"></figure>
-        <span class="sr-only">Open the</span>
-        <span>Colour Mode</span>
-        <span class="sr-only">menu. Current mode is {{ themeName() }}</span>
-      </button>
-      <div
-        class="colour-menu"
-        [ngClass]="{ 'colour-menu-open': colourModeMenuIsOpen() }"
-      >
+    <div class="a11y-tools">
+      <div class="colour-mode-container">
         <button
           type="button"
-          class="colour-mode dark"
-          (click)="changeTheme('dark-theme')"
+          class="colour-select"
+          [ngClass]="colourModeClass()"
+          aria-expanded="false"
+          (click)="toggleColourModeMenu()"
         >
           <figure class="colour-circle"></figure>
-          <span>dark</span>
+          <span class="sr-only">Open the</span>
+          <span>Colour Mode</span>
+          <span class="sr-only">menu. Current mode is {{ themeName() }}</span>
         </button>
-        <button
-          type="button"
-          class="colour-mode light"
-          (click)="changeTheme('light-theme')"
+        <div
+          class="colour-menu"
+          [ngClass]="{ 'colour-menu-open': colourModeMenuIsOpen() }"
         >
-          <figure class="colour-circle"></figure>
-          <span>light</span>
-        </button>
-        <button
-          type="button"
-          class="colour-mode monochrome"
-          (click)="changeTheme('monochrome')"
-        >
-          <figure class="colour-circle"></figure>
-          <span>monochrome</span>
-        </button>
-        <button
-          type="button"
-          class="colour-mode reset"
-          (click)="changeTheme('reset')"
-        >
-          <figure class="colour-circle"></figure>
-          <span>system setting</span>
-        </button>
+          <button
+            type="button"
+            class="colour-mode dark"
+            (click)="changeTheme('dark-theme')"
+          >
+            <figure class="colour-circle"></figure>
+            <span>dark</span>
+          </button>
+          <button
+            type="button"
+            class="colour-mode light"
+            (click)="changeTheme('light-theme')"
+          >
+            <figure class="colour-circle"></figure>
+            <span>light</span>
+          </button>
+          <button
+            type="button"
+            class="colour-mode monochrome"
+            (click)="changeTheme('monochrome')"
+          >
+            <figure class="colour-circle"></figure>
+            <span>monochrome</span>
+          </button>
+          <button
+            type="button"
+            class="colour-mode reset"
+            (click)="changeTheme('reset')"
+          >
+            <figure class="colour-circle"></figure>
+            <span>system setting</span>
+          </button>
+        </div>
+      </div>
+      <div class="text-buttons">
+        <button (click)="changeTextSize('down')">-</button>
+        <span>text size</span>
+        <button (click)="changeTextSize('up')">+</button>
+        <button (click)="changeTextSize('reset')">reset text size</button>
       </div>
     </div>
 
-    <div class="text-buttons">
-      <button (click)="changeTextSize('down')">-</button>
-      <span>text size</span>
-      <button (click)="changeTextSize('up')">+</button>
-      <button (click)="changeTextSize('reset')">reset text size</button>
-    </div>
     <div class="a11y-statement">a11y</div>
   </div>
   <div class="main-header">

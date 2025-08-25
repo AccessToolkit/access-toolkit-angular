@@ -36,6 +36,12 @@ button {
   cursor: pointer;
 }
 
+.a11y-tools {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-md);
+}
+
 .colour-select {
   border-radius: 0.5rem;
   padding: var(--padding-sm);

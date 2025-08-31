@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { AudiencesComponent } from './audiences/audiences.component';
 import { HomeComponent } from './home/home.component';
 import { OtherResourcesComponent } from './other-resources/other-resources.component';
@@ -17,6 +18,11 @@ export const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     title: 'About',
+  },
+  {
+    path: 'accessibility',
+    component: AccessibilityComponent,
+    title: 'Site Accessibility Statement',
   },
   {
     path: 'planning',

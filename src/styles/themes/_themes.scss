@@ -1,4 +1,17 @@
 body.light-theme {
+  .header-toolbar {
+    --primary: #2d00ce;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    body:not(.monochrome, .dark-theme) {
+      .header-toolbar {
+        --primary: #2d00ce;
+      }
+    }
+  }
 }
 
 body.monochrome {

@@ -71,17 +71,17 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  toggleColourModeMenu = () => {
-    let expanded: string;
-    if (this.colourModeMenuIsOpen()) {
-      this.colourModeMenuIsOpen.set(false);
-      expanded = 'false';
-    } else {
-      this.colourModeMenuIsOpen.set(true);
-      expanded = 'true';
-    }
-    this.colourModeMenuAriaExpanded.set(expanded);
-  };
+  // toggleColourModeMenu = () => {
+  //   let expanded: string;
+  //   if (this.colourModeMenuIsOpen()) {
+  //     this.colourModeMenuIsOpen.set(false);
+  //     expanded = 'false';
+  //   } else {
+  //     this.colourModeMenuIsOpen.set(true);
+  //     expanded = 'true';
+  //   }
+  //   this.colourModeMenuAriaExpanded.set(expanded);
+  // };
 
   toggleMenu = () => {
     let expanded: string;

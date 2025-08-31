@@ -56,37 +56,57 @@ button {
   display: flex;
   align-items: center;
   gap: var(--layout-gap-xs);
+
+  border: 2px solid var(--secondary);
+
+  &:hover {
+    outline: 2px solid var(--secondary);
+  }
 }
 
-.colour-menu {
-  display: none;
-  flex-direction: column;
-  gap: var(--layout-gap-xs);
-}
+#colour-menu-popover {
+  top: var(--padding-xs);
+  left: 12.5rem;
+  menu {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+  }
 
-.colour-menu-open {
-  display: flex;
+  li:last-child button {
+    border: 0;
+  }
 }
 
 .colour-mode {
-  border-radius: 0.5rem;
   padding: var(--padding-xs);
   display: flex;
   align-items: center;
   gap: var(--layout-gap-xs);
+  border-bottom: 2px solid var(--secondary);
+
+  &:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+
+    .colour-circle {
+      border-color: var(--circle-color-two);
+    }
+  }
 }
 
 .colour-mode,
 .colour-select {
   width: 11rem;
-  border: 2px solid var(--secondary);
-
   &:focus {
     background-color: var(--secondary);
     color: var(--primary);
-  }
-  &:hover {
-    outline: 2px solid var(--secondary);
+
+    .colour-circle {
+      border-color: var(--circle-color-two);
+    }
   }
 
   &.dark {

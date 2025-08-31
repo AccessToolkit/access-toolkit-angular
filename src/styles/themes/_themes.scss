@@ -47,6 +47,18 @@ body.dark-theme {
     a:active {
       color: var(--dark-mode-background);
     }
+
+    .colour-mode:hover .colour-circle {
+      border-color: var(--circle-color-one);
+    }
+
+    :is(.colour-mode, .colour-select):focus .colour-circle {
+      border-color: var(--circle-color-one);
+    }
+
+    .colour-circle {
+      border-color: var(--circle-color-two);
+    }
   }
 
   hr.dark-mode-border {
@@ -84,6 +96,18 @@ body.light-theme {
         a:focus,
         a:active {
           color: var(--dark-mode-background);
+        }
+
+        .colour-mode:hover .colour-circle {
+          border-color: var(--circle-color-one);
+        }
+
+        :is(.colour-mode, .colour-select):focus .colour-circle {
+          border-color: var(--circle-color-one);
+        }
+
+        .colour-circle {
+          border-color: var(--circle-color-two);
         }
       }
 

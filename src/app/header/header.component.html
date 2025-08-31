@@ -7,49 +7,56 @@
           class="colour-select"
           [ngClass]="colourModeClass()"
           aria-expanded="false"
-          (click)="toggleColourModeMenu()"
+          popovertarget="colour-menu-popover"
         >
           <figure class="colour-circle"></figure>
           <span class="sr-only">Open the</span>
           <span>Colour Mode</span>
           <span class="sr-only">menu. Current mode is {{ themeName() }}</span>
         </button>
-        <div
-          class="colour-menu"
-          [ngClass]="{ 'colour-menu-open': colourModeMenuIsOpen() }"
-        >
-          <button
-            type="button"
-            class="colour-mode dark"
-            (click)="changeTheme('dark-theme')"
-          >
-            <figure class="colour-circle"></figure>
-            <span>dark</span>
-          </button>
-          <button
-            type="button"
-            class="colour-mode light"
-            (click)="changeTheme('light-theme')"
-          >
-            <figure class="colour-circle"></figure>
-            <span>light</span>
-          </button>
-          <button
-            type="button"
-            class="colour-mode monochrome"
-            (click)="changeTheme('monochrome')"
-          >
-            <figure class="colour-circle"></figure>
-            <span>monochrome</span>
-          </button>
-          <button
-            type="button"
-            class="colour-mode reset"
-            (click)="changeTheme('reset')"
-          >
-            <figure class="colour-circle"></figure>
-            <span>system setting</span>
-          </button>
+        <div class="colour-menu" id="colour-menu-popover" popover>
+          <menu>
+            <li>
+              <button
+                type="button"
+                class="colour-mode dark"
+                (click)="changeTheme('dark-theme')"
+              >
+                <figure class="colour-circle"></figure>
+                <span>dark</span>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="colour-mode light"
+                (click)="changeTheme('light-theme')"
+              >
+                <figure class="colour-circle"></figure>
+                <span>light</span>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="colour-mode monochrome"
+                (click)="changeTheme('monochrome')"
+              >
+                <figure class="colour-circle"></figure>
+                <span>monochrome</span>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="colour-mode reset"
+                (click)="changeTheme('reset')"
+              >
+                <figure class="colour-circle"></figure>
+                <span>system setting</span>
+              </button>
+            </li>
+          </menu>
         </div>
       </div>
       <div class="vertical-divider"></div>

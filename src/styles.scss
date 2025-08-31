@@ -129,6 +129,7 @@ a {
 }
 
 hr.dark-mode-border {
+  visibility: hidden;
   border-top: 4px dotted var(--page-background);
   overflow: visible;
   width: 82vw;

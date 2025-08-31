@@ -49,6 +49,7 @@ body.dark-theme {
   }
 
   hr.dark-mode-border {
+    visibility: visible;
     border-color: var(--snowy-mint);
   }
 
@@ -98,6 +99,7 @@ body.light-theme {
       }
 
       hr.dark-mode-border {
+        visibility: visible;
         border-color: var(--snowy-mint);
       }
       #logos {

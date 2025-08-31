@@ -7,7 +7,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: var(--padding-sm);
   gap: var(--layout-gap-sm);
 }
 
@@ -20,12 +19,19 @@ a:active {
 }
 
 .header-toolbar {
-  color: var(--primary);
+  color: var(--secondary);
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: var(--layout-gap-md);
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  padding: var(--padding-xs);
+  border-bottom: 1px solid var(--secondary);
+}
+
+.main-header {
+  padding: var(--padding-sm);
+  padding-top: 0;
 }
 
 .colour-mode-container {
@@ -73,14 +79,14 @@ button {
 .colour-mode,
 .colour-select {
   width: 11rem;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--secondary);
 
   &:focus {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
   }
   &:hover {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--secondary);
   }
 
   &.dark {
@@ -129,7 +135,7 @@ button {
 .vertical-divider {
   height: 2.75rem;
   width: 2px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   align-self: center;
 }
 
@@ -142,7 +148,7 @@ button {
   // }
 
   .text-button {
-    border: 2px solid var(--primary);
+    border: 2px solid var(--secondary);
     border-radius: 0.5rem;
     padding: var(--padding-xs);
     height: 2.75rem;
@@ -155,11 +161,11 @@ button {
     }
 
     &:focus {
-      background-color: var(--primary);
-      color: var(--secondary);
+      background-color: var(--secondary);
+      color: var(--primary);
     }
     &:hover {
-      outline: 2px solid var(--primary);
+      outline: 2px solid var(--secondary);
     }
   }
 }

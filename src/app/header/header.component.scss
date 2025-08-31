@@ -124,12 +124,17 @@ button {
   }
 }
 
+.vertical-divider {
+  height: 2.75rem;
+  width: 2px;
+  background-color: var(--secondary);
+  align-self: center;
+}
+
 .text-buttons {
   display: flex;
-
   gap: var(--layout-gap-xs);
   align-items: center;
-
   // span {
   //   font-size: var(--subheading-1-size);
   // }

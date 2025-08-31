@@ -54,6 +54,8 @@ export class HeaderComponent implements OnInit {
       this.clearTheme(classList);
       classList.add(theme);
     }
+
+    this.setButtonTheme(theme);
   }
 
   ngOnInit(): void {
@@ -65,31 +67,7 @@ export class HeaderComponent implements OnInit {
     }
 
     if (theme) {
-      let themeName = 'system setting';
-      let buttonClass = 'reset';
-
       this.changeTheme(theme);
-
-      switch (theme) {
-        case 'dark-theme':
-          themeName = 'dark mode';
-          buttonClass = 'dark';
-          break;
-        case 'light-theme':
-          themeName = 'light mode';
-          buttonClass = 'light';
-          break;
-        case 'monochrome':
-          themeName = 'black and white mode';
-          buttonClass = 'monochrome';
-          break;
-        default:
-          themeName = 'system setting';
-          buttonClass = 'reset';
-          break;
-      }
-      this.themeName.set(themeName);
-      this.colourModeClass.set(buttonClass);
     }
   }
 
@@ -119,5 +97,31 @@ export class HeaderComponent implements OnInit {
 
   private clearTheme(classList: DOMTokenList) {
     classList.remove('dark-theme', 'light-theme', 'monochrome');
+  }
+
+  private setButtonTheme(theme: string) {
+    let themeName = 'system setting';
+    let buttonClass = 'reset';
+
+    switch (theme) {
+      case 'dark-theme':
+        themeName = 'dark mode';
+        buttonClass = 'dark';
+        break;
+      case 'light-theme':
+        themeName = 'light mode';
+        buttonClass = 'light';
+        break;
+      case 'monochrome':
+        themeName = 'black and white mode';
+        buttonClass = 'monochrome';
+        break;
+      default:
+        themeName = 'system setting';
+        buttonClass = 'reset';
+        break;
+    }
+    this.themeName.set(themeName);
+    this.colourModeClass.set(buttonClass);
   }
 }

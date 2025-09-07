@@ -9,6 +9,8 @@ import { HeaderToolbarComponent } from '../header-toolbar/header-toolbar.compone
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  constructor(breakpointObserver: BreakpointObserver) {}
+
   menuIsOpen = signal(false);
 
   menuButtonAriaExpanded = signal('false');

@@ -1,0 +1,100 @@
+import { NgClass } from '@angular/common';
+import { Component, OnInit, signal } from '@angular/core';
+
+@Component({
+  selector: 'app-header-toolbar',
+  imports: [NgClass],
+  templateUrl: './header-toolbar.component.html',
+  styleUrl: './header-toolbar.component.scss',
+})
+export class HeaderToolbarComponent implements OnInit {
+  colourModeClass = signal('reset');
+  colourModeMenuAriaExpanded = signal('false');
+  colourModeMenuIsOpen = signal(false);
+  themeName = signal('system setting');
+
+  changeTextSize(direction: string): void {
+    const html: HTMLHtmlElement | null = document.querySelector('html');
+
+    if (html) {
+      let fontSizeFloat = parseFloat(
+        html.style.fontSize.slice(0, -3) as string
+      );
+
+      if (!Number.isNaN(fontSizeFloat)) {
+        if (direction === 'up') {
+          fontSizeFloat = fontSizeFloat + 0.125;
+        } else if (direction === 'down') {
+          fontSizeFloat = fontSizeFloat - 0.125;
+        } else if (direction === 'reset') {
+          fontSizeFloat = 1;
+        }
+
+        html.style.fontSize = `${fontSizeFloat}rem`;
+        window.localStorage.setItem('font-size', fontSizeFloat.toString());
+      }
+    } else {
+      return;
+    }
+  }
+
+  changeTheme(theme: string) {
+    const body: HTMLBodyElement | null = document.querySelector('body');
+    const classList = (body as HTMLElement).classList;
+
+    window.localStorage.setItem('theme', theme);
+
+    if (classList.contains(theme) || theme === 'reset') {
+      this.clearTheme(classList);
+    } else {
+      this.clearTheme(classList);
+      classList.add(theme);
+    }
+
+    this.setButtonTheme(theme);
+  }
+
+  ngOnInit(): void {
+    const fontSize = window.localStorage.getItem('font-size');
+    const theme = window.localStorage.getItem('theme');
+
+    if (fontSize) {
+      this.changeTextSize(fontSize);
+    }
+
+    if (theme) {
+      this.changeTheme(theme);
+    }
+  }
+
+  private clearTheme(classList: DOMTokenList) {
+    classList.remove('dark-theme', 'light-theme', 'monochrome');
+  }
+
+  private setButtonTheme(theme: string) {
+    let themeName = 'system setting';
+    let buttonClass = 'reset';
+
+    switch (theme) {
+      case 'dark-theme':
+        themeName = 'dark mode';
+        buttonClass = 'dark';
+        break;
+      case 'light-theme':
+        themeName = 'light mode';
+        buttonClass = 'light';
+        break;
+      case 'monochrome':
+        themeName = 'black and white mode';
+        buttonClass = 'monochrome';
+        break;
+      default:
+        themeName = 'system setting';
+        buttonClass = 'reset';
+        break;
+    }
+
+    this.colourModeClass.set(buttonClass);
+    this.themeName.set(themeName);
+  }
+}

@@ -57,7 +57,9 @@
       </menu>
     </div>
   </div>
+  @if (!isMobile) {
   <div class="vertical-divider"></div>
+  }
   <div class="text-buttons">
     <span>Text Size</span>
     <button class="text-button" (click)="changeTextSize('down')">-</button>
@@ -67,5 +69,6 @@
     </button>
   </div>
 </div>
-
+@if (!isMobile) {
 <a routerLink="/accessibility" class="a11y-statement">Site Accessibility</a>
+}

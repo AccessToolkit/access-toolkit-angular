@@ -331,10 +331,6 @@ a#skip-link:focus {
     flex-direction: column;
   }
 
-  header ul:not(.menu-open) {
-    --menu-nav-display: none;
-  }
-
   header ul {
     flex-direction: column;
     gap: var(--layout-gap-sm);

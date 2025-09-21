@@ -1,7 +1,6 @@
 <header>
-  @if (!isMobile) {
   <app-header-toolbar />
-  }
+
   <div class="main-header">
     <h2 id="logo"><a routerLink="/">Access Toolkit for Artworkers</a></h2>
     <nav id="main-nav" aria-label="Main">
@@ -18,7 +17,8 @@
         </svg>
         <span>Menu</span>
       </button>
-      <ul role="list" [class.menu-open]="menuIsOpen()">
+      @if (menuIsOpen()) {
+      <ul role="list">
         <li>
           <a aria-current="page" routerLink="about"> About </a>
         </li>
@@ -38,6 +38,7 @@
           <a routerLink="/other-resources"> Other Resources </a>
         </li>
       </ul>
+      }
     </nav>
   </div>
 </header>

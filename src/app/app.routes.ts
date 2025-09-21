@@ -12,41 +12,41 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Home Page',
+    title: 'Home – Access Toolkit for Art Workers',
   },
   {
     path: 'about',
     component: AboutComponent,
-    title: 'About',
+    title: 'About – Access Toolkit for Art Workers',
   },
   {
     path: 'accessibility',
     component: AccessibilityComponent,
-    title: 'Site Accessibility Statement',
+    title: 'Site Accessibility Statement – Access Toolkit for Art Workers',
   },
   {
     path: 'planning',
     component: PlanningComponent,
-    title: 'Planning',
+    title: 'Planning – Access Toolkit for Art Workers',
   },
   {
     path: 'production',
     component: ProductionComponent,
-    title: 'Production',
+    title: 'Production – Access Toolkit for Art Workers',
   },
   {
     path: 'workplace',
     component: WorkplaceComponent,
-    title: 'Workplace',
+    title: 'Workplace – Access Toolkit for Art Workers',
   },
   {
     path: 'audiences',
     component: AudiencesComponent,
-    title: 'Audiences',
+    title: 'Audiences – Access Toolkit for Art Workers',
   },
   {
     path: 'other-resources',
     component: OtherResourcesComponent,
-    title: 'Other Resources',
+    title: 'Other Resources – Access Toolkit for Art Workers',
   },
 ];

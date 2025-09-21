@@ -163,4 +163,13 @@
 
 .a11y-statement {
   align-self: center;
+
+  &:focus,
+  &:active {
+    background: var(--link-color);
+    color: var(--primary);
+    outline: 0.25rem solid var(--link-color);
+    outline-offset: 0;
+    text-decoration: none;
+  }
 }

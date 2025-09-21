@@ -69,6 +69,19 @@ body.dark-theme {
   #logos {
     background-color: var(--primary);
   }
+
+  .a11y-statement {
+    color: var(--secondary);
+
+    &:focus,
+    &:active {
+      background: var(--secondary);
+      color: var(--primary);
+      outline: 0.25rem solid var(--secondary);
+      outline-offset: 0;
+      text-decoration: none;
+    }
+  }
 }
 
 body.light-theme {
@@ -93,9 +106,11 @@ body.light-theme {
         background-color: var(--secondary);
         color: var(--link-color);
 
-        a:focus,
-        a:active {
-          color: var(--dark-mode-background);
+        .main-header {
+          a:focus,
+          a:active {
+            color: var(--dark-mode-background);
+          }
         }
 
         .colour-mode:hover .colour-circle {
@@ -108,6 +123,19 @@ body.light-theme {
 
         .colour-circle {
           border-color: var(--circle-color-two);
+        }
+
+        .a11y-statement {
+          color: var(--secondary);
+
+          &:focus,
+          &:active {
+            background: var(--secondary);
+            color: var(--primary);
+            outline: 0.25rem solid var(--secondary);
+            outline-offset: 0;
+            text-decoration: none;
+          }
         }
       }
 

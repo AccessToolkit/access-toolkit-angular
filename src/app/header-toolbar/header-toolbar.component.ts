@@ -1,11 +1,12 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
 import { Component, OnDestroy, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-header-toolbar',
-  imports: [NgClass],
+  imports: [NgClass, RouterLink],
   templateUrl: './header-toolbar.component.html',
   styleUrl: './header-toolbar.component.scss',
 })

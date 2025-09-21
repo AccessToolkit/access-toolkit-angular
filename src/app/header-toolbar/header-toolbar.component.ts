@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header-toolbar',
@@ -7,7 +7,7 @@ import { Component, OnInit, signal } from '@angular/core';
   templateUrl: './header-toolbar.component.html',
   styleUrl: './header-toolbar.component.scss',
 })
-export class HeaderToolbarComponent implements OnInit {
+export class HeaderToolbarComponent {
   colourModeClass = signal('reset');
   colourModeMenuAriaExpanded = signal('false');
   colourModeMenuIsOpen = signal(false);
@@ -55,15 +55,10 @@ export class HeaderToolbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const fontSize = window.localStorage.getItem('font-size');
     const theme = window.localStorage.getItem('theme');
 
-    if (fontSize) {
-      this.changeTextSize(fontSize);
-    }
-
     if (theme) {
-      this.changeTheme(theme);
+      this.setButtonTheme(theme);
     }
   }
 

@@ -1,6 +1,12 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { NgClass } from '@angular/common';
-import { Component, OnDestroy, signal } from '@angular/core';
+import { isPlatformBrowser, NgClass } from '@angular/common';
+import {
+  Component,
+  inject,
+  OnDestroy,
+  PLATFORM_ID,
+  signal,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -15,6 +21,7 @@ export class HeaderToolbarComponent implements OnDestroy {
   colourModeMenuAriaExpanded = signal('false');
   colourModeMenuIsOpen = signal(false);
   destroyed = new Subject<void>();
+  platformId = inject(PLATFORM_ID);
   themeName = signal('system setting');
 
   protected isMobile = false;
@@ -63,10 +70,12 @@ export class HeaderToolbarComponent implements OnDestroy {
   }
 
   ngOnInit(): void {
-    const theme = window.localStorage.getItem('theme');
+    if (isPlatformBrowser(this.platformId)) {
+      const theme = window.localStorage.getItem('theme');
 
-    if (theme) {
-      this.setButtonTheme(theme);
+      if (theme) {
+        this.setButtonTheme(theme);
+      }
     }
 
     this.breakpointObserver

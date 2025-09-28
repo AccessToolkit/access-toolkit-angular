@@ -14,11 +14,17 @@ export class HeaderToolbarComponent {
   colourModeMenuIsOpen = signal(false);
   platformId = inject(PLATFORM_ID);
   themeName = signal('system setting');
+  navTooBig = false;
+  navThreshold: number | undefined;
 
   @Input() isMobile = false;
 
   changeTextSize(direction: string): void {
     const html: HTMLHtmlElement | null = document.querySelector('html');
+    const header: HTMLElement | null = document.querySelector('header');
+    const mainNav: HTMLElement | null = document.getElementById('main-nav');
+    const mainNavList: HTMLElement | null =
+      document.getElementById('main-nav-list');
 
     if (html) {
       let fontSizeFloat = parseFloat(
@@ -36,6 +42,26 @@ export class HeaderToolbarComponent {
 
         html.style.fontSize = `${fontSizeFloat}rem`;
         window.localStorage.setItem('font-size', fontSizeFloat.toString());
+
+        if (header && mainNav) {
+          if (mainNav.offsetWidth > header.offsetWidth) {
+            mainNav?.classList.add('prevent-overflow');
+            this.navThreshold = mainNav.offsetWidth;
+          } else if (
+            this.navThreshold &&
+            mainNav.offsetWidth >= this.navThreshold
+          ) {
+            return;
+          } else if (
+            this.navThreshold &&
+            mainNav.offsetWidth > header.offsetWidth &&
+            mainNav.offsetWidth > this.navThreshold
+          ) {
+            this.navThreshold = undefined;
+          } else {
+            mainNav?.classList.remove('prevent-overflow');
+          }
+        }
       }
     } else {
       return;

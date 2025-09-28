@@ -26,3 +26,13 @@ a:active {
 button {
   cursor: pointer;
 }
+
+.prevent-overflow {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

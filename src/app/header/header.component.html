@@ -18,7 +18,11 @@
         <span>Menu</span>
       </button>
 
-      <ul role="list" [ngClass]="{ 'menu-open': menuIsOpen() }">
+      <ul
+        id="main-nav-list"
+        role="list"
+        [ngClass]="{ 'menu-open': menuIsOpen() }"
+      >
         <li>
           <a aria-current="page" routerLink="about"> About </a>
         </li>

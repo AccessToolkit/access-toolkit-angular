@@ -62,10 +62,17 @@
   }
   <div class="text-buttons">
     <span id="text-size-string">Text Size</span>
-    <button class="text-button" (click)="changeTextSize('down')">-</button>
-    <button class="text-button" (click)="changeTextSize('up')">+</button>
+    <button class="text-button" (click)="changeTextSize('down')">
+      <span aria-hidden="true">-</span>
+      <span class="sr-only">Reduce text size</span>
+    </button>
+    <button class="text-button" (click)="changeTextSize('up')">
+      <span aria-hidden="true">+</span>
+      <span class="sr-only">Increase text size</span>
+    </button>
     <button class="text-button reset" (click)="changeTextSize('reset')">
-      Reset
+      <span>Reset</span>
+      <span class="sr-only"> text size</span>
     </button>
   </div>
 </div>

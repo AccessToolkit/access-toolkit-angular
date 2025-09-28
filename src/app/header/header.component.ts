@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.breakpointObserver
-      .observe(`(max-width: 45.5rem)`)
+      .observe(`(max-width: 54rem)`)
       .pipe(takeUntil(this.destroyed))
       .subscribe((result) => {
         if (!result.matches) {

@@ -42,24 +42,28 @@ span.word-count {
     color: var(--primary);
     text-decoration: none;
   }
-}
 
-.header-anchor:hover,
-.header-anchor:focus,
-.header-anchor:active {
-  text-decoration: underline;
-  text-underline-position: under;
-  text-underline-offset: 0.0625rem;
-}
+  .header-anchor:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: 0.0625rem;
+  }
 
-.header-anchor:hover::before {
-  content: "#";
-  color: var(--link-color);
-  display: inline-block;
-  margin-left: -1em;
-  text-decoration: none;
-  width: 1em;
-  line-height: var(--line-height);
+  .header-anchor:focus,
+  .header-anchor:active {
+    background: var(--primary);
+    color: var(--page-background);
+  }
+
+  .header-anchor:hover::before {
+    content: "#";
+    color: var(--link-color);
+    display: inline-block;
+    margin-left: -1em;
+    text-decoration: none;
+    width: 1em;
+    line-height: var(--line-height);
+  }
 }
 
 hr {

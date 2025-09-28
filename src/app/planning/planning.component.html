@@ -5,37 +5,59 @@
     <nav class="table-of-contents" aria-label="Table of Contents">
       <h2 id="table-of-contents">Table of Contents</h2>
       <ol>
-        <li><a href="planning/#audio-version">Audio Version</a></li>
         <li>
-          <a href="planning/#text-version">Text Version</a>
+          <a routerLink="/planning" fragment="audio-version">Audio Version</a>
+        </li>
+        <li>
+          <a routerLink="/planning" fragment="text-version">Text Version</a>
           <ol>
-            <li><a href="planning/#table-of-contents">Table of Contents</a></li>
-            <li><a href="planning/#introduction">Introduction</a></li>
-            <li><a href="planning/#access-riders">Access Riders</a></li>
             <li>
-              <a href="planning/#reasonable-adjustments"
+              <a routerLink="/planning" fragment="table-of-contents"
+                >Table of Contents</a
+              >
+            </li>
+            <li>
+              <a routerLink="/planning" fragment="introduction">Introduction</a>
+            </li>
+            <li>
+              <a routerLink="/planning" fragment="access-riders"
+                >Access Riders</a
+              >
+            </li>
+            <li>
+              <a routerLink="/planning" fragment="reasonable-adjustments"
                 >Reasonable Adjustments</a
               >
             </li>
             <li>
-              <a href="planning/#community-consultation"
+              <a routerLink="/planning" fragment="community-consultation"
                 >Community Consultation</a
               >
               <ol></ol>
             </li>
-            <li><a href="planning/#access-planning">Access Planning</a></li>
             <li>
-              <a href="planning/#financial-planning">Financial Planning</a>
+              <a routerLink="/planning" fragment="access-planning"
+                >Access Planning</a
+              >
             </li>
             <li>
-              <a href="planning/#fundraising">Fundraising</a>
+              <a routerLink="/planning" fragment="financial-planning"
+                >Financial Planning</a
+              >
+            </li>
+            <li>
+              <a routerLink="/planning" fragment="fundraising">Fundraising</a>
               <ol></ol>
             </li>
             <li>
-              <a href="planning/#consistent-planning">Consistent Planning</a>
+              <a routerLink="/planning" fragment="consistent-planning"
+                >Consistent Planning</a
+              >
             </li>
             <li>
-              <a href="planning/#opportunities">Opportunities</a>
+              <a routerLink="/planning" fragment="opportunities"
+                >Opportunities</a
+              >
               <ol></ol>
             </li>
           </ol>
@@ -44,7 +66,7 @@
     </nav>
     <article>
       <h2 id="audio-version" tabindex="-1">
-        <a class="header-anchor" href="planning/#audio-version"
+        <a class="header-anchor" routerLink="/planning" fragment="audio-version"
           ><span>Audio Version</span></a
         >
       </h2>
@@ -59,7 +81,7 @@
       </p>
 
       <h2 id="text-version" tabindex="-1">
-        <a class="header-anchor" href="planning/#text-version"
+        <a class="header-anchor" routerLink="/planning" fragment="text-version"
           ><span
             >Text Version <span class="word-count">(2098 words)</span></span
           ></a
@@ -67,7 +89,7 @@
       </h2>
 
       <h3 id="introduction" tabindex="-1">
-        <a class="header-anchor" href="planning/#introduction"
+        <a class="header-anchor" routerLink="/planning" fragment="introduction"
           ><span>Introduction</span></a
         >
       </h3>
@@ -86,7 +108,7 @@
       </p>
       <p>There are a number of ways you can gather these access needs:</p>
       <h3 id="access-riders" tabindex="-1">
-        <a class="header-anchor" href="planning/#access-riders"
+        <a class="header-anchor" routerLink="/planning" fragment="access-riders"
           ><span>Access Riders</span></a
         >
       </h3>
@@ -109,7 +131,10 @@
         >
       </p>
       <h3 id="reasonable-adjustments" tabindex="-1">
-        <a class="header-anchor" href="planning/#reasonable-adjustments"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="reasonable-adjustments"
           ><span>Reasonable Adjustments</span></a
         >
       </h3>
@@ -133,7 +158,10 @@
         support outside of the process.
       </p>
       <h3 id="community-consultation" tabindex="-1">
-        <a class="header-anchor" href="planning/#community-consultation"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="community-consultation"
           ><span>Community Consultation</span></a
         >
       </h3>
@@ -146,7 +174,10 @@
         number of ways:
       </p>
       <h4 id="accessibility-steering-group" tabindex="-1">
-        <a class="header-anchor" href="planning/#accessibility-steering-group"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="accessibility-steering-group"
           ><span>Accessibility Steering Group</span></a
         >
       </h4>
@@ -164,7 +195,10 @@
         access budget to meet the access needs of participants.
       </p>
       <h4 id="representation-on-the-board" tabindex="-1">
-        <a class="header-anchor" href="planning/#representation-on-the-board"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="representation-on-the-board"
           ><span>Representation on the Board</span></a
         >
       </h4>
@@ -180,7 +214,10 @@
         experience of reducing access barriers.
       </p>
       <h3 id="access-planning" tabindex="-1">
-        <a class="header-anchor" href="planning/#access-planning"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="access-planning"
           ><span>Access Planning</span></a
         >
       </h3>
@@ -222,7 +259,10 @@
         <li>What’s our budget?</li>
       </ul>
       <h3 id="financial-planning" tabindex="-1">
-        <a class="header-anchor" href="planning/#financial-planning"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="financial-planning"
           ><span>Financial Planning</span></a
         >
       </h3>
@@ -250,12 +290,15 @@
         combination of both.
       </p>
       <h3 id="fundraising" tabindex="-1">
-        <a class="header-anchor" href="planning/#fundraising"
+        <a class="header-anchor" routerLink="/planning" fragment="fundraising"
           ><span>Fundraising</span></a
         >
       </h3>
       <h4 id="in-the-uk-and-ireland" tabindex="-1">
-        <a class="header-anchor" href="planning/#in-the-uk-and-ireland"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="in-the-uk-and-ireland"
           ><span>In the UK and Ireland</span></a
         >
       </h4>
@@ -278,7 +321,7 @@
         separately from the overall project budget.
       </p>
       <h4 id="in-ireland" tabindex="-1">
-        <a class="header-anchor" href="planning/#in-ireland"
+        <a class="header-anchor" routerLink="/planning" fragment="in-ireland"
           ><span>In Ireland</span></a
         >
       </h4>
@@ -296,7 +339,7 @@
         </li>
       </ul>
       <h4 id="in-the-uk" tabindex="-1">
-        <a class="header-anchor" href="planning/#in-the-uk"
+        <a class="header-anchor" routerLink="/planning" fragment="in-the-uk"
           ><span>In the UK</span></a
         >
       </h4>
@@ -324,7 +367,10 @@
         </li>
       </ul>
       <h3 id="consistent-planning" tabindex="-1">
-        <a class="header-anchor" href="planning/#consistent-planning"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="consistent-planning"
           ><span>Consistent Planning</span></a
         >
       </h3>
@@ -359,7 +405,7 @@
         </li>
       </ul>
       <h3 id="opportunities" tabindex="-1">
-        <a class="header-anchor" href="planning/#opportunities"
+        <a class="header-anchor" routerLink="/planning" fragment="opportunities"
           ><span>Opportunities</span></a
         >
       </h3>
@@ -371,7 +417,10 @@
         way:
       </p>
       <h4 id="web-accessibility" tabindex="-1">
-        <a class="header-anchor" href="planning/#web-accessibility"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="web-accessibility"
           ><span>Web Accessibility</span></a
         >
       </h4>
@@ -400,7 +449,10 @@
         web accessibility standards.
       </p>
       <h4 id="colour-blindness" tabindex="-1">
-        <a class="header-anchor" href="planning/#colour-blindness"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="colour-blindness"
           ><span>Colour Blindness</span></a
         >
       </h4>
@@ -416,7 +468,7 @@
         >.
       </p>
       <h4 id="readability" tabindex="-1">
-        <a class="header-anchor" href="planning/#readability"
+        <a class="header-anchor" routerLink="/planning" fragment="readability"
           ><span>Readability</span></a
         >
       </h4>
@@ -434,7 +486,8 @@
       <h4 id="image-descriptions-%2F-alt-text" tabindex="-1">
         <a
           class="header-anchor"
-          href="planning/#image-descriptions-%2F-alt-text"
+          routerLink="/planning"
+          fragment="image-descriptions-%2F-alt-text"
           ><span>Image Descriptions / Alt Text</span></a
         >
       </h4>
@@ -446,7 +499,7 @@
         posts.
       </p>
       <h4 id="large-text" tabindex="-1">
-        <a class="header-anchor" href="planning/#large-text"
+        <a class="header-anchor" routerLink="/planning" fragment="large-text"
           ><span>Large Text</span></a
         >
       </h4>
@@ -460,7 +513,7 @@
         case letters.
       </p>
       <h4 id="easy-read" tabindex="-1">
-        <a class="header-anchor" href="planning/#easy-read"
+        <a class="header-anchor" routerLink="/planning" fragment="easy-read"
           ><span>Easy Read</span></a
         >
       </h4>
@@ -474,7 +527,7 @@
         and English isn’t their first language.
       </p>
       <h4 id="audio-version" tabindex="-1">
-        <a class="header-anchor" href="planning/#audio-version"
+        <a class="header-anchor" routerLink="/planning" fragment="audio-version"
           ><span>Audio Version</span></a
         >
       </h4>
@@ -485,7 +538,10 @@
         app on a smartphone, ensuring everything is still legible.
       </p>
       <h4 id="sign-language-interpretation" tabindex="-1">
-        <a class="header-anchor" href="planning/#sign-language-interpretation"
+        <a
+          class="header-anchor"
+          routerLink="/planning"
+          fragment="sign-language-interpretation"
           ><span>Sign Language Interpretation</span></a
         >
       </h4>
@@ -523,7 +579,7 @@
         lived experience and/or knowledge of the language.
       </p>
       <h4 id="language" tabindex="-1">
-        <a class="header-anchor" href="planning/#language"
+        <a class="header-anchor" routerLink="/planning" fragment="language"
           ><span>Language</span></a
         >
       </h4>

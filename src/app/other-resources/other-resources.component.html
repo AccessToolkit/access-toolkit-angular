@@ -4,15 +4,24 @@
     <nav class="table-of-contents" aria-label="Table of Contents">
       <h2 id="table-of-contents">Table of Contents</h2>
       <ol>
-        <li><a href="other-resources/#audio-version">Audio Version</a></li>
         <li>
-          <a href="other-resources/#text-version">Text Version</a>
+          <a routerLink="/other-resources" fragment="audio-version"
+            >Audio Version</a
+          >
+        </li>
+        <li>
+          <a routerLink="/other-resources" fragment="text-version"
+            >Text Version</a
+          >
         </li>
       </ol>
     </nav>
     <article>
       <h2 id="audio-version" tabindex="-1">
-        <a class="header-anchor" href="other-resources/#audio-version"
+        <a
+          class="header-anchor"
+          routerLink="/other-resources"
+          fragment="audio-version"
           ><span>Audio Version</span></a
         >
       </h2>
@@ -26,7 +35,10 @@
         <a href="assets/audio/resources.mp3">Download audio</a>
       </p>
       <h2 id="text-version" tabindex="-1">
-        <a class="header-anchor" href="other-resources/#text-version"
+        <a
+          class="header-anchor"
+          routerLink="/other-resources"
+          fragment="text-version"
           ><span>Text Version</span></a
         >
       </h2>

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-production',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './production.component.html',
-  styleUrl: './production.component.scss'
+  styleUrl: './production.component.scss',
 })
-export class ProductionComponent {
-
-}
+export class ProductionComponent {}

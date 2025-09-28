@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-other-resources',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './other-resources.component.html',
-  styleUrl: './other-resources.component.scss'
+  styleUrl: './other-resources.component.scss',
 })
-export class OtherResourcesComponent {
-
-}
+export class OtherResourcesComponent {}

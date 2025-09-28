@@ -4,16 +4,18 @@
     <nav class="table-of-contents" aria-label="Table of Contents">
       <h2 id="table-of-contents">Table of Contents</h2>
       <ol>
-        <li><a href="about/#audio-version">Audio Version</a></li>
         <li>
-          <a href="about/#text-version">Text Version</a>
+          <a routerLink="/about" fragment="audio-version">Audio Version</a>
+        </li>
+        <li>
+          <a routerLink="/about" fragment="text-version">Text Version</a>
         </li>
       </ol>
     </nav>
 
     <article>
       <h2 id="audio-version" tabindex="-1">
-        <a class="header-anchor" href="about/#audio-version"
+        <a class="header-anchor" routerLink="/about" fragment="audio-version"
           ><span>Audio Version</span></a
         >
       </h2>
@@ -27,7 +29,7 @@
         <a href="assets/audio/about.mp3">Download audio</a>
       </p>
       <h2 id="text-version" tabindex="-1">
-        <a class="header-anchor" href="about/#text-version"
+        <a class="header-anchor" routerLink="/about" fragment="text-version"
           ><span
             >Text Version <span class="word-count">(551 words)</span></span
           ></a

@@ -66,6 +66,16 @@ body.dark-theme {
     border-color: var(--snowy-mint);
   }
 
+  svg {
+    .svg-background {
+      fill: var(--monochrome-black) !important;
+    }
+
+    .svg-logo {
+      fill: var(--primary) !important;
+    }
+  }
+
   #logos {
     background-color: var(--primary);
   }
@@ -143,6 +153,17 @@ body.light-theme {
         visibility: visible;
         border-color: var(--snowy-mint);
       }
+
+      svg {
+        .svg-background {
+          fill: var(--monochrome-black) !important;
+        }
+
+        .svg-logo {
+          fill: var(--primary) !important;
+        }
+      }
+
       #logos {
         background-color: var(--primary);
       }

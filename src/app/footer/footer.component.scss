@@ -18,7 +18,7 @@ footer {
 footer a:focus,
 footer a:active {
   background: var(--link-color);
-  color: var(--color);
+  color: var(--primary);
   outline: 0.125rem solid var(--link-color);
   outline-offset: 0;
 }

@@ -316,7 +316,7 @@ a#skip-link:focus {
   clip: auto;
 }
 
-@media screen and (max-width: 77.5rem) {
+@media screen and (max-width: 45.5rem) {
   nav#main-nav {
     display: flex;
     align-items: center;
@@ -329,6 +329,10 @@ a#skip-link:focus {
     --menu-button-display: grid;
 
     flex-direction: column;
+  }
+
+  header ul:not(.menu-open) {
+    --menu-nav-display: none;
   }
 
   header ul {

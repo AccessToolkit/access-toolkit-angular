@@ -1,5 +1,5 @@
 <header>
-  <app-header-toolbar />
+  <app-header-toolbar [isMobile]="isMobile" />
 
   <div class="main-header">
     <h2 id="logo"><a routerLink="/">Access Toolkit for Art Workers</a></h2>
@@ -17,8 +17,8 @@
         </svg>
         <span>Menu</span>
       </button>
-      @if (menuIsOpen()) {
-      <ul role="list">
+
+      <ul role="list" [ngClass]="{ 'menu-open': menuIsOpen() }">
         <li>
           <a aria-current="page" routerLink="about"> About </a>
         </li>
@@ -37,11 +37,12 @@
         <li>
           <a routerLink="/other-resources"> Other Resources </a>
         </li>
+        @if (isMobile) {
         <li>
           <a routerLink="/accessibility">Site Accessibility</a>
         </li>
+        }
       </ul>
-      }
     </nav>
   </div>
 </header>

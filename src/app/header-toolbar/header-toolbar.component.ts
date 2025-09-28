@@ -1,14 +1,6 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { isPlatformBrowser, NgClass } from '@angular/common';
-import {
-  Component,
-  inject,
-  OnDestroy,
-  PLATFORM_ID,
-  signal,
-} from '@angular/core';
+import { Component, inject, Input, PLATFORM_ID, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-header-toolbar',
@@ -16,17 +8,14 @@ import { Subject, takeUntil } from 'rxjs';
   templateUrl: './header-toolbar.component.html',
   styleUrl: './header-toolbar.component.scss',
 })
-export class HeaderToolbarComponent implements OnDestroy {
+export class HeaderToolbarComponent {
   colourModeClass = signal('reset');
   colourModeMenuAriaExpanded = signal('false');
   colourModeMenuIsOpen = signal(false);
-  destroyed = new Subject<void>();
   platformId = inject(PLATFORM_ID);
   themeName = signal('system setting');
 
-  protected isMobile = false;
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  @Input() isMobile = false;
 
   changeTextSize(direction: string): void {
     const html: HTMLHtmlElement | null = document.querySelector('html');
@@ -77,17 +66,6 @@ export class HeaderToolbarComponent implements OnDestroy {
         this.setButtonTheme(theme);
       }
     }
-
-    this.breakpointObserver
-      .observe(`(max-width: 680px)`)
-      .pipe(takeUntil(this.destroyed))
-      .subscribe((result) => {
-        if (!result.matches) {
-          this.isMobile = false;
-        } else {
-          this.isMobile = true;
-        }
-      });
   }
 
   private clearTheme(classList: DOMTokenList) {
@@ -119,10 +97,5 @@ export class HeaderToolbarComponent implements OnDestroy {
 
     this.colourModeClass.set(buttonClass);
     this.themeName.set(themeName);
-  }
-
-  ngOnDestroy() {
-    this.destroyed.next();
-    this.destroyed.complete();
   }
 }

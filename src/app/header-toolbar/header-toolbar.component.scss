@@ -9,7 +9,7 @@
   border-bottom: 1px solid var(--secondary);
 }
 
-@media screen and (max-width: 26rem) {
+@media screen and (max-width: 30.5rem) {
   :host {
     gap: var(--layout-gap-sm);
 
@@ -186,7 +186,7 @@
   }
 }
 
-@media screen and (max-width: 23rem) {
+@media screen and (max-width: 25rem) {
   .text-buttons {
     display: none;
   }

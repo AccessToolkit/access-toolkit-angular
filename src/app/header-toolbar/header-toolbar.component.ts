@@ -32,8 +32,17 @@ export class HeaderToolbarComponent {
       );
 
       if (!Number.isNaN(fontSizeFloat)) {
-        if (direction === 'up') {
+        if (fontSizeFloat >= 1.5) {
+          header?.classList.add('move-site-a11y');
+        } else if (header?.classList.contains('move-site-a11y')) {
+          header.classList.remove('move-site-a11y');
+        }
+        if (direction === 'up' && fontSizeFloat >= 2) {
+          fontSizeFloat = 2;
+        } else if (direction === 'up') {
           fontSizeFloat = fontSizeFloat + 0.125;
+        } else if (direction === 'down' && fontSizeFloat <= 0.5) {
+          fontSizeFloat = 0.5;
         } else if (direction === 'down') {
           fontSizeFloat = fontSizeFloat - 0.125;
         } else if (direction === 'reset') {
@@ -47,6 +56,7 @@ export class HeaderToolbarComponent {
           if (mainNav.offsetWidth > header.offsetWidth) {
             mainNav?.classList.add('prevent-overflow');
             this.navThreshold = mainNav.offsetWidth;
+            this.navTooBig = true;
           } else if (
             this.navThreshold &&
             mainNav.offsetWidth >= this.navThreshold
@@ -58,7 +68,7 @@ export class HeaderToolbarComponent {
             mainNav.offsetWidth > this.navThreshold
           ) {
             this.navThreshold = undefined;
-          } else {
+          } else if (direction === 'down' || direction === 'reset') {
             mainNav?.classList.remove('prevent-overflow');
           }
         }

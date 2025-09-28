@@ -359,8 +359,16 @@ ol li li {
   margin-left: var(--padding-sm);
 }
 
-/* Able Player */
+#site-a11y-desktop {
+  display: none;
+}
 
-.able-status-bar {
-  box-sizing: content-box;
+.move-site-a11y {
+  #site-a11y-desktop {
+    display: block;
+  }
+
+  .a11y-statement {
+    display: none;
+  }
 }

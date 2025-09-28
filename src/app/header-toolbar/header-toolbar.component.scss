@@ -5,7 +5,7 @@
   justify-content: space-between;
   gap: var(--layout-gap-md);
   background-color: var(--primary);
-  padding: var(--padding-xs);
+  padding: var(--padding-xs) var(--padding-sm);
   border-bottom: 1px solid var(--secondary);
 }
 
@@ -183,5 +183,11 @@
     outline: 0.25rem solid var(--link-color);
     outline-offset: 0;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 23rem) {
+  .text-buttons {
+    display: none;
   }
 }

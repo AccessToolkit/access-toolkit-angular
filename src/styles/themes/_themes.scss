@@ -61,6 +61,12 @@ body.dark-theme {
     }
   }
 
+  #menu-button:focus {
+    --svg-fill: var(--secondary);
+    color: var(--secondary);
+    background-color: var(--primary);
+  }
+
   hr.dark-mode-border {
     visibility: visible;
     border-color: var(--snowy-mint);
@@ -147,6 +153,12 @@ body.light-theme {
             text-decoration: none;
           }
         }
+      }
+
+      #menu-button:focus {
+        --svg-fill: var(--secondary);
+        color: var(--secondary);
+        background-color: var(--primary);
       }
 
       hr.dark-mode-border {

@@ -156,11 +156,12 @@ main a:not(.header-anchor):active {
 }
 
 #main-nav ul {
-  width: 65%;
+  width: 100%;
   display: var(--menu-nav-display);
   justify-content: space-between;
   font-size: var(--subheading-1-size);
   gap: var(--layout-gap-sm);
+  flex-wrap: wrap;
 }
 
 #logo {

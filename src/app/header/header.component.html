@@ -2,7 +2,11 @@
   <app-header-toolbar [isMobile]="isMobile" />
 
   <div class="main-header">
-    <h2 id="logo"><a routerLink="/">Access Toolkit for Art Workers</a></h2>
+    <h2 id="logo">
+      <a routerLink="/" fragment="main-heading"
+        >Access Toolkit for Art Workers</a
+      >
+    </h2>
     <nav id="main-nav" aria-label="Main">
       <button
         #menuButton
@@ -25,30 +29,40 @@
         [ngClass]="{ 'menu-open': menuIsOpen() }"
       >
         <li>
-          <a aria-current="page" routerLink="about"> About </a>
+          <a aria-current="page" routerLink="about" fragment="main-heading">
+            About
+          </a>
         </li>
         <li>
-          <a routerLink="/planning"> Planning </a>
+          <a routerLink="/planning" fragment="main-heading"> Planning </a>
         </li>
         <li>
-          <a routerLink="/production"> Production </a>
+          <a routerLink="/production" fragment="main-heading"> Production </a>
         </li>
         <li>
-          <a routerLink="/workplace"> Workplace </a>
+          <a routerLink="/workplace" fragment="main-heading"> Workplace </a>
         </li>
         <li>
-          <a routerLink="/audiences"> Audiences &amp; Display </a>
+          <a routerLink="/audiences" fragment="main-heading">
+            Audiences &amp; Display
+          </a>
         </li>
         <li>
-          <a routerLink="/other-resources"> Other Resources </a>
+          <a routerLink="/other-resources" fragment="main-heading">
+            Other Resources
+          </a>
         </li>
         @if (isMobile) {
         <li>
-          <a routerLink="/accessibility">Site Accessibility</a>
+          <a routerLink="/accessibility" fragment="main-heading"
+            >Site Accessibility</a
+          >
         </li>
         } @else {
         <li id="site-a11y-desktop">
-          <a routerLink="/accessibility">Site Accessibility</a>
+          <a routerLink="/accessibility" fragment="main-heading"
+            >Site Accessibility</a
+          >
         </li>
         }
       </ul>

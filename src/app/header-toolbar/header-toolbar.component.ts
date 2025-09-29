@@ -1,5 +1,12 @@
 import { isPlatformBrowser, NgClass } from '@angular/common';
-import { Component, inject, Input, PLATFORM_ID, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  Input,
+  PLATFORM_ID,
+  signal,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,9 +16,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header-toolbar.component.scss',
 })
 export class HeaderToolbarComponent {
+  colourMenu: Element | null;
+  colourModeButtons: Element[] = [];
   colourModeClass = signal('reset');
   colourModeMenuAriaExpanded = signal('false');
   colourModeMenuIsOpen = signal(false);
+  elementRef = inject(ElementRef);
   platformId = inject(PLATFORM_ID);
   themeName = signal('system setting');
   navTooBig = false;
@@ -19,12 +29,21 @@ export class HeaderToolbarComponent {
 
   @Input() isMobile = false;
 
+  constructor() {
+    this.colourMenu = (this.elementRef.nativeElement as Element).querySelector(
+      '#colour-menu-popover'
+    );
+    if (this.colourMenu) {
+      this.colourModeButtons = Array.from(
+        this.colourMenu.querySelectorAll('button')
+      );
+    }
+  }
+
   changeTextSize(direction: string): void {
     const html: HTMLHtmlElement | null = document.querySelector('html');
     const header: HTMLElement | null = document.querySelector('header');
     const mainNav: HTMLElement | null = document.getElementById('main-nav');
-    const mainNavList: HTMLElement | null =
-      document.getElementById('main-nav-list');
 
     if (html) {
       let fontSizeFloat = parseFloat(
@@ -111,27 +130,38 @@ export class HeaderToolbarComponent {
   private setButtonTheme(theme: string) {
     let themeName = 'system setting';
     let buttonClass = 'reset';
+    let element = this.colourMenu?.querySelector('#reset-button');
+    this.colourModeButtons.forEach((button) => {
+      button.ariaPressed = 'false';
+    });
 
     switch (theme) {
       case 'dark-theme':
         themeName = 'dark mode';
         buttonClass = 'dark';
+        element = this.colourMenu?.querySelector('#dark-button');
         break;
       case 'light-theme':
         themeName = 'light mode';
         buttonClass = 'light';
+        element = this.colourMenu?.querySelector('#light-button');
         break;
       case 'monochrome':
         themeName = 'black and white mode';
         buttonClass = 'monochrome';
+        element = this.colourMenu?.querySelector('#monochrome-button');
         break;
       default:
         themeName = 'system setting';
         buttonClass = 'reset';
+        element = this.colourMenu?.querySelector('#reset-button');
         break;
     }
 
     this.colourModeClass.set(buttonClass);
     this.themeName.set(themeName);
+    if (element) {
+      element.ariaPressed = 'true';
+    }
   }
 }

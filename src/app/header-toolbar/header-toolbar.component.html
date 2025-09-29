@@ -13,6 +13,7 @@
       <span class="sr-only"> menu. Current mode is {{ themeName() }}</span>
     </button>
     <div class="colour-menu" id="colour-menu-popover" popover>
+      <span class="sr-only">Select a colour mode</span>
       <menu>
         <li>
           <button
@@ -22,7 +23,9 @@
             (click)="changeTheme('dark-theme')"
           >
             <figure class="colour-circle"></figure>
+            <span class="sr-only">Use </span>
             <span>dark</span>
+            <span class="sr-only"> mode</span>
           </button>
         </li>
         <li>
@@ -33,7 +36,9 @@
             (click)="changeTheme('light-theme')"
           >
             <figure class="colour-circle"></figure>
+            <span class="sr-only">Use </span>
             <span>light</span>
+            <span class="sr-only"> mode</span>
           </button>
         </li>
         <li>
@@ -44,7 +49,10 @@
             (click)="changeTheme('monochrome')"
           >
             <figure class="colour-circle"></figure>
+
+            <span class="sr-only">Use </span>
             <span>monochrome</span>
+            <span class="sr-only"> mode</span>
           </button>
         </li>
         <li>
@@ -55,7 +63,10 @@
             (click)="changeTheme('reset')"
           >
             <figure class="colour-circle"></figure>
+
+            <span class="sr-only">Use </span>
             <span>system setting</span>
+            <span class="sr-only"> to determine colour mode</span>
           </button>
         </li>
       </menu>

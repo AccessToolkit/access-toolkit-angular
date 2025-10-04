@@ -21,7 +21,7 @@ html {
 body {
   background-color: var(--page-background);
   color: var(--primary);
-  line-height: calc(2px + 2ex + 2px);
+  line-height: var(--line-height);
 
   &:has(app-home) {
     background-color: var(--secondary);
@@ -346,5 +346,30 @@ ol li li {
 
   .a11y-statement {
     display: none;
+  }
+}
+
+#skip-to-top {
+  --link-focus-color: var(--page-background);
+
+  font-size: var(--subheading-2-size);
+  margin-inline: auto;
+  margin-top: var(--padding-md);
+  width: fit-content;
+
+  &:visited {
+    color: var(--link-color);
+  }
+
+  &:hover {
+    text-decoration-thickness: 0.3rem;
+  }
+
+  &:focus,
+  &:active {
+    background: var(--link-color);
+    color: var(--link-focus-color);
+    outline: 0.5rem solid var(--link-color);
+    outline-offset: -1px;
   }
 }

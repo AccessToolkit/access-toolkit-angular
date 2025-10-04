@@ -182,3 +182,13 @@ body.light-theme {
     }
   }
 }
+
+@media (forced-colors: active) {
+  svg {
+    fill: currentColor;
+
+    .svg-logo {
+      fill: currentColor !important;
+    }
+  }
+}

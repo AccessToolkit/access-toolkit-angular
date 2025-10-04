@@ -1,3 +1,190 @@
-<h1>Site accessibility</h1>
+<main>
+  <h1 id="main-heading">Site accessibility</h1>
+  <div class="main-content">
+    <nav class="table-of-contents" aria-label="Table of Contents">
+      <h2 id="table-of-contents">Table of Contents</h2>
+      <ol>
+        <li>
+          <a routerLink="/other-resources" fragment="introduction"
+            >Introduction</a
+          >
+        </li>
+        <li>
+          <a routerLink="/other-resources" fragment="issues"
+            >Notes on known issues</a
+          >
+        </li>
+        <li>
+          <a routerLink="/other-resources" fragment="features"
+            >Accessibility features</a
+          >
+        </li>
+        <li>
+          <a routerLink="/other-resources" fragment="how-we-work"
+            >How we work towards site accessibility</a
+          >
+        </li>
+      </ol>
+    </nav>
+    <article>
+      <h2 id="introduction" tabindex="-1">
+        <a
+          class="header-anchor"
+          routerLink="/accessibility"
+          fragment="/introduction"
+          >Introduction</a
+        >
+      </h2>
 
-<p>Site accessibility page is currently in development</p>
+      <p>
+        This site was made with accessibility in mind and with the intention
+        that everyone should be able to use it. The site should meet the Web
+        Content Accessibility Guidlines (WCAG) 2.2 Level AA. However, there is
+        always the possibility of things that we missed as we are a small team.
+        There are also accessibility and usability improvements that are missing
+        from the site that we have listed below.
+      </p>
+
+      <h2 id="issues" tabindex="-1">
+        <a class="header-anchor" routerLink="/accessibility" fragment="/issues"
+          >Notes on known issues</a
+        >
+      </h2>
+      <ul>
+        <li>
+          <span
+            >The site is missing British Sign Language and Irish Sign Language
+            versions.</span
+          >
+        </li>
+        <li>
+          <span>The site is missing an "easy read" version.</span>
+        </li>
+        <li>
+          <span
+            >The link to this site accessibility page is in a different location
+            on the large screen and small screen versions of the site. This was
+            done so that the link could be easier to see in the big screen
+            version, even though it doesn't fit at the top of the screen in the
+            small screen version. However, it is also always in a second
+            location for keyboard users right after the skip link.</span
+          >
+        </li>
+        <li>
+          <span
+            >While this page should work correctly with a screen reader, it is
+            missing the audio versions of the text recorded for the other pages.
+            This is both because it was written later, and also because this
+            page will change in response to discovering and fixing issues.</span
+          >
+        </li>
+        <li>
+          <span
+            >Colour mode picker and navigation menu are only navigable with the
+            tab button and not with arrow keys as in best practice.</span
+          >
+        </li>
+        <li>
+          <span
+            >Colour mode picker doesn't hide itself when it loses keyboard
+            focus.</span
+          >
+        </li>
+        <li>
+          <span>
+            The site uses the browser audio player for maximum compatibility,
+            but this may cause issues for users. See
+            <a
+              href="https://adrianroselli.com/2023/09/browser-video-players-review.html?Theme=Unset"
+              >Browser Video Players Review</a
+            >
+            by Adrian Roselli for a recent comparison of the browser media
+            players.
+          </span>
+        </li>
+        <li>
+          <span
+            >The site was mostly tested with the Chrome browser and NVDA screen
+            reader. There may be issues when using other screen reader and
+            browser combinations.</span
+          >
+        </li>
+      </ul>
+
+      <h2 id="features" tabindex="-1">
+        <a
+          class="header-anchor"
+          routerLink="/accessibility"
+          fragment="/features"
+          >Accessibility features</a
+        >
+      </h2>
+
+      <ul>
+        <li>
+          "Skip to content link" as well as quick link to this page for keyboard
+          users
+        </li>
+        <li>
+          <span
+            >Colour mode picker: All themes pass contrast requirements, but some
+            users prefer darker colours, and contrast for some themes may not be
+            sufficinet for colour-blind users.</span
+          >
+        </li>
+        <li><span>Resizable text</span></li>
+        <li>
+          <span
+            >Table of contents for easier navigation through big pages, as well
+            as a scroll to top link so keyboard users are not stuck at the end
+            of a page.</span
+          >
+        </li>
+        <li>
+          <span
+            >Audio recordings of our main page contents that can be downloaded
+            and listened to away from the site.</span
+          >
+        </li>
+      </ul>
+
+      <h2 id="how-we-work" tabindex="-1">
+        <a
+          class="header-anchor"
+          routerLink="/accessibility"
+          fragment="/how-we-work"
+          >How we work towards site accessibility</a
+        >
+      </h2>
+
+      <p>
+        The Access Toolkit for Art Workers site has been designed and tested by
+        <a lang="ga" href="https://www.saerlaith.com"
+          >Saerlaith Uaid Ní Dhuibhir</a
+        >
+        to comply with the World Wide Web Consortium's
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+          >Web Content Accessibility Guidelines (WCAG) 2.2</a
+        >
+        at Level AA, the level legally required in many countries. Where
+        possible, we have aimed to meet Level AAA requirements also.
+      </p>
+
+      <p>
+        User testing beyond simply meeting guidelines is a vital part of making
+        a website accessible. However, this has been beyond the scope of this
+        small project. If there is any part of this website that remains
+        inaccessible for you, please
+        <a href="mailto:iarlaith@accesstoolkit.art"
+          >contact <span lang="ga">Iarlaith Ní Fheorais</span></a
+        >
+        at iarlaith"&#64;"accesstoolkit.art
+      </p>
+    </article>
+  </div>
+
+  <a id="skip-to-top" href="#skip-link"
+    ><span aria-hidden="true">⇈</span> Back to top
+    <span aria-hidden="true">⇈</span></a
+  >
+</main>

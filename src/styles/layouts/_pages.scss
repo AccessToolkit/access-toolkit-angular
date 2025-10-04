@@ -29,7 +29,7 @@ span.word-count {
   background: var(--link-color);
   color: var(--link-focus-color);
   outline: 0.25rem solid var(--link-color);
-  outline-offset: 0;
+  outline-offset: -1px;
 
   &:visited {
     background-color: var(--visited-color);

@@ -94,7 +94,7 @@ body.dark-theme {
       background: var(--secondary);
       color: var(--primary);
       outline: 0.25rem solid var(--secondary);
-      outline-offset: 0;
+      outline-offset: -1px;
       text-decoration: none;
     }
   }
@@ -149,7 +149,7 @@ body.light-theme {
             background: var(--secondary);
             color: var(--primary);
             outline: 0.25rem solid var(--secondary);
-            outline-offset: 0;
+            outline-offset: -1px;
             text-decoration: none;
           }
         }

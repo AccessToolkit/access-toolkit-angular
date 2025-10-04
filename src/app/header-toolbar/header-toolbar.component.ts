@@ -119,6 +119,8 @@ export class HeaderToolbarComponent {
 
       if (theme) {
         this.setButtonTheme(theme);
+      } else {
+        this.setButtonTheme('reset');
       }
     }
   }

@@ -32,6 +32,7 @@
 @media screen and (max-width: 30.5rem) {
   :host {
     gap: var(--layout-gap-sm);
+    flex-wrap: wrap;
 
     .a11y-tools {
       display: contents;
@@ -248,10 +249,4 @@ svg {
   height: inherit;
   width: inherit;
   border-radius: 50%;
-}
-
-@media screen and (max-width: 27rem) {
-  :host {
-    flex-wrap: wrap;
-  }
 }

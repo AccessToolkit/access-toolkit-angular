@@ -9,13 +9,42 @@
   border-bottom: 1px solid var(--secondary);
 }
 
+@media screen and (max-width: 37.5rem) {
+  :host {
+    .colour-select {
+      width: unset;
+    }
+
+    #hidden-colour-mode {
+      display: block;
+    }
+
+    #visible-colour-mode {
+      display: none;
+    }
+
+    #colour-menu-popover {
+      left: 5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 30.5rem) {
   :host {
     gap: var(--layout-gap-sm);
 
+    .a11y-tools {
+      display: contents;
+    }
+
+    .vertical-divider {
+      display: none;
+    }
+
     .text-buttons #text-size-string {
       white-space: normal;
       max-width: min-content;
+      line-height: normal;
     }
   }
 }
@@ -26,11 +55,11 @@
   gap: var(--layout-gap-md);
 }
 
-@media screen and (max-width: 63rem) {
-  .a11y-tools {
-    display: contents;
-  }
-}
+// @media screen and (max-width: 63rem) {
+//   .a11y-tools {
+//     display: contents;
+//   }
+// }
 
 .colour-select {
   border-radius: 0.5rem;
@@ -175,19 +204,49 @@
 
 .a11y-statement {
   align-self: center;
+  display: flex;
+  align-items: center;
 
-  &:focus,
-  &:active {
-    background: var(--link-color);
-    color: var(--primary);
-    outline: 0.25rem solid var(--link-color);
-    outline-offset: -1px;
-    text-decoration: none;
+  &:has(#visible-a11y-span) {
+    &:focus,
+    &:active {
+      background: var(--link-color);
+      color: var(--primary);
+      outline: 0.25rem solid var(--link-color);
+      outline-offset: -1px;
+      text-decoration: none;
+    }
+  }
+
+  &:has(svg) {
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 0.5rem;
+    &:focus,
+    &:active {
+      background: var(--link-color);
+      svg {
+        fill: var(--primary);
+      }
+    }
+
+    &:hover {
+      outline: 0.25rem solid var(--secondary);
+      outline-offset: 1px;
+    }
   }
 }
 
+svg {
+  fill: var(--secondary);
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 27rem) {
-  .text-buttons {
-    display: none;
+  :host {
+    flex-wrap: wrap;
+    // display: none;
   }
 }
